@@ -9,7 +9,8 @@
   ],
   "scripts": {
     "dev": "turbo run dev",
-    "build": "turbo run build",
+    "build": "turbo run build --filter=@clearhaul/broker-console --filter=@clearhaul/shipper-portal --filter=@clearhaul/carrier-app --filter=@clearhaul/types --filter=@clearhaul/ui --filter=@clearhaul/sdk-js --filter=@clearhaul/workers",
+    "build:broker": "turbo run build --filter=@clearhaul/broker-console",
     "test": "turbo run test",
     "lint": "turbo run lint",
     "type-check": "turbo run type-check",
