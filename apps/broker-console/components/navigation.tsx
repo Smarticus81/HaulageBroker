@@ -10,13 +10,9 @@ import { Button } from '@/components/ui/button'
 const navigation = [
   { name: 'Dashboard', href: '/', icon: Shield },
   { name: 'Loads', href: '/loadboard', icon: Truck },
-  { name: 'Intake', href: '/load-intake', icon: FileText },
-  { name: 'Carriers', href: '/carrier-sourcing', icon: Users },
   { name: 'Dispatch', href: '/dispatch', icon: MapPin },
   { name: 'Track', href: '/monitoring', icon: Package },
-  { name: 'Deliver', href: '/delivery', icon: Package },
-  { name: 'Pay', href: '/settlements', icon: DollarSign },
-  { name: 'Reports', href: '/analytics', icon: BarChart3 },
+  { name: 'Settle', href: '/settlements', icon: DollarSign },
 ]
 
 export function Navigation() {
@@ -41,18 +37,12 @@ export function Navigation() {
 
   return (
     <nav className="bg-white/80 backdrop-blur-xl border-b border-slate-200/50 shadow-sm sticky top-0 z-50" data-nav="single">
-      <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between h-16">
+        <div className="container mx-auto px-6">
+          <div className="flex items-center justify-between h-14">
           {/* Logo */}
-          <div className="flex items-center space-x-3 hover:scale-105 transition-transform duration-200">
-            <div className="relative">
-              <Shield className="h-9 w-9 text-slate-700" />
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-indigo-500/20 rounded-full blur-sm"></div>
-            </div>
-            <div className="flex flex-col">
-              <span className="text-xl font-light text-slate-800 tracking-wide">Anderson Direct</span>
-              <span className="text-xs text-slate-500 -mt-1 tracking-wider">TRANSPORT</span>
-            </div>
+          <div className="flex items-center space-x-2">
+            <Shield className="h-7 w-7 text-blue-600" />
+            <span className="text-lg font-semibold text-slate-800">Anderson Direct</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -65,20 +55,15 @@ export function Navigation() {
                 <div key={item.name}>
                   <Link
                     href={item.href}
-                           className={cn(
-                             'group relative flex items-center space-x-2 px-3 py-2 rounded-xl text-sm font-medium transition-all duration-300',
+                    className={cn(
+                      'flex items-center space-x-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors',
                       isActive
-                        ? 'text-slate-800 bg-gradient-to-r from-blue-50 to-indigo-50'
-                        : 'text-slate-600 hover:text-slate-800 hover:bg-slate-50/80'
+                        ? 'text-blue-600 bg-blue-50'
+                        : 'text-slate-600 hover:text-slate-800 hover:bg-slate-50'
                     )}
                   >
-                    <div className="hover:scale-110 hover:rotate-3 transition-transform duration-200">
-                      <item.icon className="h-4 w-4" />
-                    </div>
-                    <span className="hidden lg:block">{item.name}</span>
-                    
-                    {/* Hover glow */}
-                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-400/0 to-indigo-400/0 group-hover:from-blue-400/5 group-hover:to-indigo-400/5 transition-all duration-300 -z-10"></div>
+                    <item.icon className="h-4 w-4" />
+                    <span>{item.name}</span>
                   </Link>
                 </div>
               )
