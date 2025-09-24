@@ -8,7 +8,7 @@ import { useState, useEffect } from 'react'
 import { Button } from '@/components/ui/button'
 
 const navigation = [
-  { name: 'Dashboard', href: '/dashboard', icon: Shield },
+  { name: 'Dashboard', href: '/', icon: Shield },
   { name: 'Loads', href: '/loadboard', icon: Truck },
   { name: 'Intake', href: '/load-intake', icon: FileText },
   { name: 'Carriers', href: '/carrier-sourcing', icon: Users },

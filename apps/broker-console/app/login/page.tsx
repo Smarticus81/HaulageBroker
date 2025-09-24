@@ -27,7 +27,7 @@ export default function LoginPage() {
         role: 'President',
         company: 'Anderson Direct Transport'
       }))
-      router.push('/dashboard')
+      router.push('/')
     }, 1500)
   }
 
