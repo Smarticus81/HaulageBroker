@@ -13,6 +13,7 @@ const navigation = [
   { name: 'Dispatch', href: '/dispatch', icon: MapPin },
   { name: 'Track', href: '/monitoring', icon: Package },
   { name: 'Settle', href: '/settlements', icon: DollarSign },
+  { name: 'Help', href: '/instructions', icon: FileText },
 ]
 
 export function Navigation() {
