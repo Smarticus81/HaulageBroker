@@ -46,17 +46,16 @@ export function Navigation() {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-1">
-            {/* Navigation Items */}
-            <div className="flex items-center space-x-1 mr-6">
-            {navigation.map((item) => {
-              const isActive = pathname === item.href
-              return (
-                <div key={item.name}>
+          <div className="hidden lg:flex items-center justify-center flex-1">
+            <div className="flex items-center space-x-2">
+              {navigation.map((item) => {
+                const isActive = pathname === item.href
+                return (
                   <Link
+                    key={item.name}
                     href={item.href}
                     className={cn(
-                      'flex items-center space-x-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors',
+                      'flex items-center space-x-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors',
                       isActive
                         ? 'text-blue-600 bg-blue-50'
                         : 'text-slate-600 hover:text-slate-800 hover:bg-slate-50'
@@ -65,60 +64,84 @@ export function Navigation() {
                     <item.icon className="h-4 w-4" />
                     <span>{item.name}</span>
                   </Link>
-                </div>
-              )
-            })}
+                )
+              })}
             </div>
+          </div>
 
-            {/* User Menu */}
-            {user && (
-              <div className="relative">
-                <Button
-                  variant="ghost"
-                  onClick={() => setShowUserMenu(!showUserMenu)}
-                  className="flex items-center space-x-2 px-4 py-2 rounded-2xl hover:bg-slate-50/80 transition-all duration-300"
-                >
-                  <div className="w-8 h-8 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-full flex items-center justify-center">
-                    <User className="h-4 w-4 text-blue-600" />
-                  </div>
-                  <div className="text-left">
+          {/* Tablet Navigation */}
+          <div className="hidden md:flex lg:hidden items-center justify-center flex-1">
+            <div className="flex items-center space-x-1">
+              {navigation.map((item) => {
+                const isActive = pathname === item.href
+                return (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className={cn(
+                      'flex items-center space-x-1 px-3 py-2 rounded-lg text-sm font-medium transition-colors',
+                      isActive
+                        ? 'text-blue-600 bg-blue-50'
+                        : 'text-slate-600 hover:text-slate-800 hover:bg-slate-50'
+                    )}
+                  >
+                    <item.icon className="h-4 w-4" />
+                    <span className="hidden xl:block">{item.name}</span>
+                  </Link>
+                )
+              })}
+            </div>
+          </div>
+
+          {/* User Menu */}
+          {user && (
+            <div className="relative">
+              <Button
+                variant="ghost"
+                onClick={() => setShowUserMenu(!showUserMenu)}
+                className="flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-slate-50 transition-colors"
+              >
+                <div className="w-7 h-7 bg-blue-100 rounded-full flex items-center justify-center">
+                  <User className="h-4 w-4 text-blue-600" />
+                </div>
+                <div className="hidden sm:block text-left">
+                  <div className="text-sm font-medium text-slate-800">{user.name}</div>
+                  <div className="text-xs text-slate-500">{user.role}</div>
+                </div>
+              </Button>
+
+              {showUserMenu && (
+                <div className="absolute right-0 top-full mt-2 w-56 bg-white border border-slate-200 rounded-xl shadow-lg py-2 z-50">
+                  <div className="px-4 py-3 border-b border-slate-200">
                     <div className="text-sm font-medium text-slate-800">{user.name}</div>
-                    <div className="text-xs text-slate-500">{user.role}</div>
+                    <div className="text-xs text-slate-500">{user.email}</div>
+                    <div className="text-xs text-blue-600 mt-1">{user.company}</div>
                   </div>
-                </Button>
-
-                {showUserMenu && (
-                  <div className="absolute right-0 top-full mt-2 w-64 bg-white/95 backdrop-blur-xl border border-slate-200/50 rounded-2xl shadow-xl py-2 z-50">
-                    <div className="px-4 py-3 border-b border-slate-200/50">
-                      <div className="text-sm font-medium text-slate-800">{user.name}</div>
-                      <div className="text-xs text-slate-500">{user.email}</div>
-                      <div className="text-xs text-blue-600 mt-1">{user.company}</div>
-                    </div>
-                    <Button
-                      variant="ghost"
-                      onClick={handleLogout}
-                      className="w-full justify-start px-4 py-2 text-red-600 hover:text-red-700 hover:bg-red-50/50"
-                    >
-                      <LogOut className="h-4 w-4 mr-2" />
-                      Sign Out
-                    </Button>
-                  </div>
-                )}
-              </div>
-            )}
+                  <Button
+                    variant="ghost"
+                    onClick={handleLogout}
+                    className="w-full justify-start px-4 py-2 text-red-600 hover:text-red-700 hover:bg-red-50"
+                  >
+                    <LogOut className="h-4 w-4 mr-2" />
+                    Sign Out
+                  </Button>
+                </div>
+              )}
+            </div>
+          )}
           </div>
 
           {/* Mobile Navigation Button */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-3 rounded-2xl text-slate-600 hover:text-slate-800 hover:bg-slate-50/80 transition-all duration-300 active:scale-95"
+              className="p-2 rounded-lg text-slate-600 hover:text-slate-800 hover:bg-slate-50 transition-colors"
               aria-label="Toggle navigation menu"
             >
               {mobileMenuOpen ? (
-                <X className="h-6 w-6 transition-transform duration-200" />
+                <X className="h-5 w-5" />
               ) : (
-                <Menu className="h-6 w-6 transition-transform duration-200" />
+                <Menu className="h-5 w-5" />
               )}
             </button>
           </div>
@@ -126,26 +149,25 @@ export function Navigation() {
 
         {/* Mobile Navigation Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden border-t border-slate-200/50 overflow-hidden transition-all duration-300">
-            <div className="py-4 space-y-2">
+          <div className="lg:hidden border-t border-slate-200 bg-white">
+            <div className="px-4 py-4 space-y-1">
               {navigation.map((item) => {
                 const isActive = pathname === item.href
                 return (
-                  <div key={item.name}>
-                    <Link
-                      href={item.href}
-                      onClick={() => setMobileMenuOpen(false)}
-                      className={cn(
-                        'flex items-center space-x-3 px-4 py-3 rounded-2xl text-sm font-medium transition-all duration-300',
-                        isActive
-                          ? 'text-slate-800 bg-gradient-to-r from-blue-50 to-indigo-50'
-                          : 'text-slate-600 hover:text-slate-800 hover:bg-slate-50/80'
-                      )}
-                    >
-                      <item.icon className="h-5 w-5" />
-                      <span>{item.name}</span>
-                    </Link>
-                  </div>
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={cn(
+                      'flex items-center space-x-3 px-3 py-3 rounded-lg text-sm font-medium transition-colors',
+                      isActive
+                        ? 'text-blue-600 bg-blue-50'
+                        : 'text-slate-600 hover:text-slate-800 hover:bg-slate-50'
+                    )}
+                  >
+                    <item.icon className="h-4 w-4" />
+                    <span>{item.name}</span>
+                  </Link>
                 )
               })}
             </div>

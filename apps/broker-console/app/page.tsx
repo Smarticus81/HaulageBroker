@@ -52,7 +52,7 @@ export default function BrokerConsole() {
       <AuthGuard>
         <Navigation />
 
-        <div className="container mx-auto px-6 py-6">
+        <div className="container mx-auto px-4 sm:px-6 py-4 sm:py-6">
           {/* Clean Header */}
           <div className="mb-8">
             <h1 className="text-2xl font-medium text-slate-800 mb-1">
@@ -62,7 +62,7 @@ export default function BrokerConsole() {
           </div>
 
           {/* Key Metrics */}
-          <div className="grid md:grid-cols-3 gap-6 mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 mb-8">
             {[
               { 
                 title: "Active Loads", 
@@ -106,7 +106,7 @@ export default function BrokerConsole() {
           </div>
 
           {/* Essential Operations */}
-          <div className="grid lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
             {/* Critical Loads */}
             <Card className="border border-slate-200/60 bg-white/80 backdrop-blur-sm shadow-sm rounded-xl">
               <CardHeader className="pb-4">
