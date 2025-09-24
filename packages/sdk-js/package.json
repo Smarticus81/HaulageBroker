@@ -1,0 +1,19 @@
+{
+  "name": "@clearhaul/sdk-js",
+  "version": "0.1.0",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@clearhaul/types": "*",
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

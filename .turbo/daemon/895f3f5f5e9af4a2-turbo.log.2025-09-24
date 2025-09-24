@@ -1,0 +1,984 @@
+2025-09-24T00:00:51.863986Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\cookies\\1.cookie")}
+2025-09-24T00:00:51.864008Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T00:00:51.964549Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon"), AnchoredSystemPathBuf(".turbo\\cookies")}
+2025-09-24T00:00:51.964577Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T00:00:54.464777Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("packages\\sdk-js")}
+2025-09-24T00:00:54.464792Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/sdk-js"), path: AnchoredSystemPathBuf("packages\\sdk-js") }}))
+2025-09-24T00:00:54.565645Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("packages\\workers")}
+2025-09-24T00:00:54.565668Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/workers"), path: AnchoredSystemPathBuf("packages\\workers") }}))
+2025-09-24T00:00:54.764207Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("packages\\ui")}
+2025-09-24T00:00:54.764221Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/ui"), path: AnchoredSystemPathBuf("packages\\ui") }}))
+2025-09-24T00:01:00.165200Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("packages\\sdk-js\\tsconfig.json"), AnchoredSystemPathBuf("packages\\ui\\tsconfig.json"), AnchoredSystemPathBuf("packages\\ui\\src\\index.ts"), AnchoredSystemPathBuf("packages\\workers\\tsconfig.json"), AnchoredSystemPathBuf("packages\\types\\tsconfig.json"), AnchoredSystemPathBuf("packages\\ui\\src\\card.tsx"), AnchoredSystemPathBuf("packages\\ui\\src\\utils.ts"), AnchoredSystemPathBuf("packages\\workers\\src\\index.ts"), AnchoredSystemPathBuf("packages\\types\\src\\index.ts"), AnchoredSystemPathBuf("packages\\ui\\src\\button.tsx"), AnchoredSystemPathBuf("packages\\sdk-js\\src\\index.ts")}
+2025-09-24T00:01:00.165216Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/ui"), path: AnchoredSystemPathBuf("packages\\ui") }, WorkspacePackage { name: Other("@clearhaul/workers"), path: AnchoredSystemPathBuf("packages\\workers") }, WorkspacePackage { name: Other("@clearhaul/sdk-js"), path: AnchoredSystemPathBuf("packages\\sdk-js") }, WorkspacePackage { name: Other("@clearhaul/types"), path: AnchoredSystemPathBuf("packages\\types") }}))
+2025-09-24T00:01:00.194814Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2025-09-24T00:01:00.197683Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2025-09-24T00:01:00.197697Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2025-09-24T00:01:00.264258Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("packages\\workers\\src\\index.ts"), AnchoredSystemPathBuf("packages\\ui\\src\\index.ts"), AnchoredSystemPathBuf("packages\\sdk-js\\src\\index.ts"), AnchoredSystemPathBuf("packages\\ui\\src\\card.tsx"), AnchoredSystemPathBuf("packages\\ui\\src\\button.tsx"), AnchoredSystemPathBuf("packages\\types\\src\\index.ts"), AnchoredSystemPathBuf("packages\\workers\\tsconfig.json"), AnchoredSystemPathBuf("packages\\ui\\src\\utils.ts")}
+2025-09-24T00:01:00.264272Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/ui"), path: AnchoredSystemPathBuf("packages\\ui") }, WorkspacePackage { name: Other("@clearhaul/sdk-js"), path: AnchoredSystemPathBuf("packages\\sdk-js") }, WorkspacePackage { name: Other("@clearhaul/workers"), path: AnchoredSystemPathBuf("packages\\workers") }, WorkspacePackage { name: Other("@clearhaul/types"), path: AnchoredSystemPathBuf("packages\\types") }}))
+2025-09-24T00:01:00.264287Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2025-09-24T00:01:00.264297Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2025-09-24T00:01:00.264302Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2025-09-24T00:01:00.264310Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2025-09-24T00:03:28.068228Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T00:03:28.068249Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T00:03:34.467320Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T00:03:34.467333Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T00:08:15.072836Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T00:08:15.072856Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T00:08:15.773569Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T00:08:15.773580Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T00:11:36.576437Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("packages\\workers\\src\\index.ts")}
+2025-09-24T00:11:36.576455Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/workers"), path: AnchoredSystemPathBuf("packages\\workers") }}))
+2025-09-24T00:11:40.375217Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\shipper-portal\\app\\page.tsx")}
+2025-09-24T00:11:40.375230Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/shipper-portal"), path: AnchoredSystemPathBuf("apps\\shipper-portal") }}))
+2025-09-24T00:11:42.576233Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\shipper-portal\\app\\page.tsx")}
+2025-09-24T00:11:42.576251Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/shipper-portal"), path: AnchoredSystemPathBuf("apps\\shipper-portal") }}))
+2025-09-24T00:11:44.975237Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\shipper-portal\\app\\page.tsx")}
+2025-09-24T00:11:44.975248Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/shipper-portal"), path: AnchoredSystemPathBuf("apps\\shipper-portal") }}))
+2025-09-24T00:11:47.575590Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\shipper-portal\\app\\page.tsx")}
+2025-09-24T00:11:47.575611Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/shipper-portal"), path: AnchoredSystemPathBuf("apps\\shipper-portal") }}))
+2025-09-24T00:11:50.175767Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\shipper-portal\\app\\page.tsx")}
+2025-09-24T00:11:50.175779Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/shipper-portal"), path: AnchoredSystemPathBuf("apps\\shipper-portal") }}))
+2025-09-24T00:11:52.876886Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\shipper-portal\\app\\page.tsx")}
+2025-09-24T00:11:52.876898Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/shipper-portal"), path: AnchoredSystemPathBuf("apps\\shipper-portal") }}))
+2025-09-24T00:11:57.475705Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\shipper-portal\\app\\page.tsx")}
+2025-09-24T00:11:57.475720Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/shipper-portal"), path: AnchoredSystemPathBuf("apps\\shipper-portal") }}))
+2025-09-24T00:12:02.975560Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\carrier-app\\app\\page.tsx")}
+2025-09-24T00:12:02.975576Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/carrier-app"), path: AnchoredSystemPathBuf("apps\\carrier-app") }}))
+2025-09-24T00:12:05.276102Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\carrier-app\\app\\page.tsx")}
+2025-09-24T00:12:05.276114Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/carrier-app"), path: AnchoredSystemPathBuf("apps\\carrier-app") }}))
+2025-09-24T00:12:07.476795Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\carrier-app\\app\\page.tsx")}
+2025-09-24T00:12:07.476808Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/carrier-app"), path: AnchoredSystemPathBuf("apps\\carrier-app") }}))
+2025-09-24T00:12:12.376703Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\carrier-app\\app\\page.tsx")}
+2025-09-24T00:12:12.376716Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/carrier-app"), path: AnchoredSystemPathBuf("apps\\carrier-app") }}))
+2025-09-24T00:12:19.276303Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\carrier-app\\app\\page.tsx")}
+2025-09-24T00:12:19.276320Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/carrier-app"), path: AnchoredSystemPathBuf("apps\\carrier-app") }}))
+2025-09-24T00:12:21.576768Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\carrier-app\\app\\page.tsx")}
+2025-09-24T00:12:21.576788Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/carrier-app"), path: AnchoredSystemPathBuf("apps\\carrier-app") }}))
+2025-09-24T00:12:23.776083Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\carrier-app\\app\\page.tsx")}
+2025-09-24T00:12:23.776096Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/carrier-app"), path: AnchoredSystemPathBuf("apps\\carrier-app") }}))
+2025-09-24T00:12:26.376308Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\carrier-app\\app\\page.tsx")}
+2025-09-24T00:12:26.376320Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/carrier-app"), path: AnchoredSystemPathBuf("apps\\carrier-app") }}))
+2025-09-24T00:12:31.075950Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\page.tsx")}
+2025-09-24T00:12:31.075970Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T00:12:33.476765Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\page.tsx")}
+2025-09-24T00:12:33.476777Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T00:12:36.076235Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\page.tsx")}
+2025-09-24T00:12:36.076248Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T00:12:38.976915Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\page.tsx")}
+2025-09-24T00:12:38.976929Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T00:12:42.176581Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\page.tsx")}
+2025-09-24T00:12:42.176596Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T00:12:44.776071Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\page.tsx")}
+2025-09-24T00:12:44.776089Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T00:12:48.377129Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("sql\\migrations\\001_initial_schema.sql")}
+2025-09-24T00:12:48.377143Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T00:12:54.277819Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("sql\\migrations\\001_initial_schema.sql")}
+2025-09-24T00:12:54.277831Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T00:12:57.577296Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("sql\\migrations\\001_initial_schema.sql")}
+2025-09-24T00:12:57.577316Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T00:13:00.777005Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("sql\\migrations\\001_initial_schema.sql")}
+2025-09-24T00:13:00.777027Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T00:13:02.077318Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T00:13:02.077329Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T00:13:02.978369Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T00:13:02.978386Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T00:13:04.576813Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("README.md")}
+2025-09-24T00:13:04.576827Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T00:13:07.877058Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("README.md")}
+2025-09-24T00:13:07.877075Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T00:13:13.876724Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("README.md")}
+2025-09-24T00:13:13.876744Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T00:13:17.478038Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("README.md")}
+2025-09-24T00:13:17.478051Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T00:13:21.277273Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("README.md")}
+2025-09-24T00:13:21.277291Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T00:13:24.078260Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("README.md")}
+2025-09-24T00:13:24.078278Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T00:13:26.778212Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("README.md")}
+2025-09-24T00:13:26.778230Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T00:13:29.378277Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("README.md")}
+2025-09-24T00:13:29.378289Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T00:13:35.277633Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("README.md")}
+2025-09-24T00:13:35.277646Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T00:13:38.178814Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("README.md")}
+2025-09-24T00:13:38.178827Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T00:13:40.578164Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("README.md")}
+2025-09-24T00:13:40.578176Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T00:13:44.777605Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("README.md")}
+2025-09-24T00:13:44.777618Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T00:13:55.178366Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\page.tsx"), AnchoredSystemPathBuf("apps\\carrier-app\\app\\page.tsx"), AnchoredSystemPathBuf("README.md"), AnchoredSystemPathBuf("packages\\workers\\src\\index.ts"), AnchoredSystemPathBuf("sql\\migrations\\001_initial_schema.sql"), AnchoredSystemPathBuf("apps\\shipper-portal\\app\\page.tsx")}
+2025-09-24T00:13:55.178380Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/carrier-app"), path: AnchoredSystemPathBuf("apps\\carrier-app") }, WorkspacePackage { name: Other("@clearhaul/workers"), path: AnchoredSystemPathBuf("packages\\workers") }, WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }, WorkspacePackage { name: Other("@clearhaul/shipper-portal"), path: AnchoredSystemPathBuf("apps\\shipper-portal") }, WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T00:13:55.182491Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2025-09-24T00:13:55.183138Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2025-09-24T00:13:55.183709Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2025-09-24T00:13:55.184982Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2025-09-24T00:17:49.082647Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T00:17:49.082666Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T00:17:49.781467Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T00:17:49.781478Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T00:22:36.086469Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T00:22:36.086483Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T00:22:36.787335Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T00:22:36.787355Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T00:27:23.089280Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T00:27:23.089300Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T00:27:23.790426Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T00:27:23.790438Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T00:32:10.093828Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T00:32:10.093844Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T00:32:10.794355Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T00:32:10.794367Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T00:33:09.295412Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T00:33:09.295425Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T00:36:57.098233Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T00:36:57.098247Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T00:36:57.798788Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T00:36:57.798799Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T00:41:44.102288Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T00:41:44.102306Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T00:41:44.803092Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T00:41:44.803103Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T00:46:31.106334Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T00:46:31.106347Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T00:46:32.105954Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T00:46:32.105966Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T00:51:18.110203Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T00:51:18.110216Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T00:51:18.810770Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T00:51:18.810781Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T00:56:05.114102Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T00:56:05.114120Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T00:56:05.813376Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T00:56:05.813388Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T00:58:25.515824Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T00:58:25.515839Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T00:59:27.616237Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app"), AnchoredSystemPathBuf("apps\\broker-console\\app\\load-intake\\page.tsx"), AnchoredSystemPathBuf("apps\\broker-console\\app\\load-intake")}
+2025-09-24T00:59:27.616253Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T01:00:03.017235Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\carrier-sourcing"), AnchoredSystemPathBuf("apps\\broker-console\\app\\carrier-sourcing\\page.tsx"), AnchoredSystemPathBuf("apps\\broker-console\\app")}
+2025-09-24T01:00:03.017302Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T01:00:03.117462Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\carrier-sourcing\\page.tsx")}
+2025-09-24T01:00:03.117477Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T01:00:48.917394Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app"), AnchoredSystemPathBuf("apps\\broker-console\\app\\dispatch"), AnchoredSystemPathBuf("apps\\broker-console\\app\\dispatch\\page.tsx")}
+2025-09-24T01:00:48.917420Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T01:00:49.017130Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\dispatch\\page.tsx")}
+2025-09-24T01:00:49.017145Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T01:00:52.117050Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T01:00:52.117063Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T01:00:53.017562Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T01:00:53.017574Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T01:01:16.316733Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\monitoring\\page.tsx"), AnchoredSystemPathBuf("apps\\broker-console\\app"), AnchoredSystemPathBuf("apps\\broker-console\\app\\monitoring")}
+2025-09-24T01:01:16.316746Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T01:01:16.418041Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\monitoring\\page.tsx")}
+2025-09-24T01:01:16.418067Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T01:01:52.018825Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\delivery"), AnchoredSystemPathBuf("apps\\broker-console\\app\\delivery\\page.tsx"), AnchoredSystemPathBuf("apps\\broker-console\\app")}
+2025-09-24T01:01:52.018840Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T01:01:52.118189Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\delivery\\page.tsx")}
+2025-09-24T01:01:52.118205Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T01:02:26.218494Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\settlements")}
+2025-09-24T01:02:26.218507Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T01:02:26.317947Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\settlements\\page.tsx"), AnchoredSystemPathBuf("apps\\broker-console\\app"), AnchoredSystemPathBuf("apps\\broker-console\\app\\settlements")}
+2025-09-24T01:02:26.317969Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T01:03:03.319910Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\analytics"), AnchoredSystemPathBuf("apps\\broker-console\\app\\analytics\\page.tsx"), AnchoredSystemPathBuf("apps\\broker-console\\app")}
+2025-09-24T01:03:03.319932Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T01:03:03.420212Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\analytics\\page.tsx")}
+2025-09-24T01:03:03.420235Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T01:03:07.719169Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\page.tsx")}
+2025-09-24T01:03:07.719185Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T01:03:09.719848Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\page.tsx")}
+2025-09-24T01:03:09.719870Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T01:03:30.619804Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\page.tsx")}
+2025-09-24T01:03:30.619825Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T01:03:34.120367Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\components\\ui"), AnchoredSystemPathBuf("apps\\broker-console\\components\\ui\\input.tsx")}
+2025-09-24T01:03:34.120383Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T01:03:37.219790Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\components\\ui"), AnchoredSystemPathBuf("apps\\broker-console\\components\\ui\\label.tsx")}
+2025-09-24T01:03:37.219802Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T01:03:37.320529Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\components\\ui\\label.tsx")}
+2025-09-24T01:03:37.320544Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T01:03:40.918768Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\components\\ui"), AnchoredSystemPathBuf("apps\\broker-console\\components\\ui\\textarea.tsx")}
+2025-09-24T01:03:40.918786Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T01:03:44.519225Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\components\\ui"), AnchoredSystemPathBuf("apps\\broker-console\\components\\ui\\badge.tsx")}
+2025-09-24T01:03:44.519240Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T01:03:44.620247Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\components\\ui\\badge.tsx")}
+2025-09-24T01:03:44.620269Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T01:03:51.819712Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\components\\ui"), AnchoredSystemPathBuf("apps\\broker-console\\components\\ui\\progress.tsx")}
+2025-09-24T01:03:51.819728Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T01:03:51.919909Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\components\\ui\\progress.tsx")}
+2025-09-24T01:03:51.919928Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T01:04:05.120334Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\components\\ui"), AnchoredSystemPathBuf("apps\\broker-console\\components\\ui\\select.tsx")}
+2025-09-24T01:04:05.120350Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T01:04:05.220630Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\components\\ui\\select.tsx")}
+2025-09-24T01:04:05.220651Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T01:04:18.719569Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\delivery\\page.tsx"), AnchoredSystemPathBuf("apps\\broker-console\\components\\ui\\label.tsx"), AnchoredSystemPathBuf("apps\\broker-console\\app\\page.tsx"), AnchoredSystemPathBuf("apps\\broker-console\\components\\ui\\select.tsx"), AnchoredSystemPathBuf("apps\\broker-console\\app\\analytics\\page.tsx"), AnchoredSystemPathBuf("apps\\broker-console\\components\\ui\\badge.tsx"), AnchoredSystemPathBuf("apps\\broker-console\\components\\ui\\progress.tsx"), AnchoredSystemPathBuf("apps\\broker-console\\app\\settlements\\page.tsx"), AnchoredSystemPathBuf("apps\\broker-console\\app\\monitoring\\page.tsx"), AnchoredSystemPathBuf("apps\\broker-console\\app\\load-intake\\page.tsx"), AnchoredSystemPathBuf("apps\\broker-console\\app\\carrier-sourcing\\page.tsx"), AnchoredSystemPathBuf("apps\\broker-console\\components\\ui\\input.tsx"), AnchoredSystemPathBuf("apps\\broker-console\\components\\ui\\textarea.tsx"), AnchoredSystemPathBuf("apps\\broker-console\\app\\dispatch\\page.tsx")}
+2025-09-24T01:04:18.719591Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T01:04:18.719624Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2025-09-24T01:05:39.121127Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T01:05:39.121143Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T01:05:40.221479Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T01:05:40.221491Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T01:10:26.125276Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T01:10:26.125296Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T01:10:26.824120Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T01:10:26.824132Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T01:15:13.128161Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T01:15:13.128173Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T01:15:13.828358Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T01:15:13.828369Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T01:20:00.131753Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T01:20:00.131764Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T01:20:00.831904Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T01:20:00.831915Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T01:24:47.135227Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T01:24:47.135240Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T01:24:47.835802Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T01:24:47.835814Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T01:28:25.837266Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T01:28:25.837285Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T01:37:24.344743Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\package.json")}
+2025-09-24T01:37:24.344759Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T01:37:30.344968Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("node_modules")}
+2025-09-24T01:37:30.344979Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T01:37:30.545037Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("node_modules")}
+2025-09-24T01:37:30.545048Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T01:37:30.745151Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("package-lock.json")}
+2025-09-24T01:37:30.745163Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T01:37:35.044280Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("node_modules")}
+2025-09-24T01:37:35.044296Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T01:37:35.145438Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("node_modules")}
+2025-09-24T01:37:35.145452Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T01:37:35.445135Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("package-lock.json")}
+2025-09-24T01:37:35.445150Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T01:37:40.444257Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\components\\ui\\label.tsx")}
+2025-09-24T01:37:40.444271Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T01:37:45.344377Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\components\\ui\\progress.tsx")}
+2025-09-24T01:37:45.344391Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T01:38:03.144594Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\components\\ui\\select.tsx")}
+2025-09-24T01:38:03.144609Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T01:38:06.044597Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\load-intake\\page.tsx")}
+2025-09-24T01:38:06.044610Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T01:38:11.344532Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\load-intake\\page.tsx")}
+2025-09-24T01:38:11.344551Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T01:38:16.544812Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\load-intake\\page.tsx")}
+2025-09-24T01:38:16.544826Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T01:38:18.945462Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\cookies\\2.cookie")}
+2025-09-24T01:38:18.945483Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T01:38:19.045398Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\cookies")}
+2025-09-24T01:38:19.045421Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T01:39:08.145088Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T01:39:08.145106Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T01:39:09.245283Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T01:39:09.245295Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T01:43:55.148799Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T01:43:55.148815Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T01:43:55.849141Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T01:43:55.849153Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T01:48:42.153215Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T01:48:42.153230Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T01:48:42.852749Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T01:48:42.852760Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T01:50:21.355049Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\analytics\\page.tsx")}
+2025-09-24T01:50:21.355062Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T01:51:49.055283Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\analytics\\page.tsx")}
+2025-09-24T01:51:49.055296Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T01:51:49.055317Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2025-09-24T01:53:29.155643Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T01:53:29.155662Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T01:53:30.256830Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T01:53:30.256843Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T01:54:20.356149Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\components\\navigation.tsx"), AnchoredSystemPathBuf("apps\\broker-console\\components")}
+2025-09-24T01:54:20.356173Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T01:54:20.456462Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\components\\navigation.tsx")}
+2025-09-24T01:54:20.456483Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T01:54:25.957772Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\page.tsx")}
+2025-09-24T01:54:25.957836Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T01:54:43.256806Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\load-intake\\page.tsx")}
+2025-09-24T01:54:43.256821Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T01:54:55.858125Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\carrier-sourcing\\page.tsx")}
+2025-09-24T01:54:55.858146Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T01:55:04.357971Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\dispatch\\page.tsx")}
+2025-09-24T01:55:04.357984Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T01:55:14.057473Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\monitoring\\page.tsx")}
+2025-09-24T01:55:14.057494Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T01:55:26.057283Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\delivery\\page.tsx")}
+2025-09-24T01:55:26.057318Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T01:55:35.958079Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\settlements\\page.tsx")}
+2025-09-24T01:55:35.958093Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T01:55:45.157102Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\analytics\\page.tsx")}
+2025-09-24T01:55:45.157115Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T01:56:14.058288Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\settlements\\page.tsx"), AnchoredSystemPathBuf("apps\\broker-console\\app\\analytics\\page.tsx"), AnchoredSystemPathBuf("apps\\broker-console\\app\\carrier-sourcing\\page.tsx"), AnchoredSystemPathBuf("apps\\broker-console\\app\\load-intake\\page.tsx"), AnchoredSystemPathBuf("apps\\broker-console\\app\\delivery\\page.tsx"), AnchoredSystemPathBuf("apps\\broker-console\\app\\page.tsx"), AnchoredSystemPathBuf("apps\\broker-console\\app\\dispatch\\page.tsx"), AnchoredSystemPathBuf("apps\\broker-console\\app\\monitoring\\page.tsx"), AnchoredSystemPathBuf("apps\\broker-console\\components\\navigation.tsx")}
+2025-09-24T01:56:14.058310Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T01:56:14.058343Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2025-09-24T01:58:16.159641Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T01:58:16.159656Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T01:58:17.261021Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T01:58:17.261033Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T01:58:26.060180Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T01:58:26.060191Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T02:03:03.162882Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T02:03:03.162902Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T02:03:03.862791Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T02:03:03.862805Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T02:07:50.166889Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T02:07:50.166909Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T02:07:50.867667Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T02:07:50.867678Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T02:11:55.670419Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\components\\navigation.tsx")}
+2025-09-24T02:11:55.670435Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T02:12:12.869486Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("README.md")}
+2025-09-24T02:12:12.869498Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T02:12:16.769814Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("package.json")}
+2025-09-24T02:12:16.769824Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(All)
+2025-09-24T02:12:21.270265Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\package.json")}
+2025-09-24T02:12:21.270278Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T02:12:37.170736Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T02:12:37.170750Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T02:12:40.370326Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T02:12:40.370338Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T02:12:56.070201Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\components\\navigation.tsx")}
+2025-09-24T02:12:56.070226Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T02:13:04.169071Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\page.tsx")}
+2025-09-24T02:13:04.169082Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T02:13:17.870480Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\page.tsx")}
+2025-09-24T02:13:17.870493Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T02:13:38.870354Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\page.tsx")}
+2025-09-24T02:13:38.870368Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T02:14:23.870186Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\loadboard"), AnchoredSystemPathBuf("apps\\broker-console\\app\\loadboard\\page.tsx")}
+2025-09-24T02:14:23.870199Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T02:14:23.970842Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app"), AnchoredSystemPathBuf("apps\\broker-console\\app\\loadboard\\page.tsx")}
+2025-09-24T02:14:23.970861Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T02:14:31.470713Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\components\\navigation.tsx")}
+2025-09-24T02:14:31.470726Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T02:15:51.572386Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\shipper-portal\\app\\page.tsx")}
+2025-09-24T02:15:51.572405Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/shipper-portal"), path: AnchoredSystemPathBuf("apps\\shipper-portal") }}))
+2025-09-24T02:15:57.871809Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\shipper-portal\\package.json")}
+2025-09-24T02:15:57.871823Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/shipper-portal"), path: AnchoredSystemPathBuf("apps\\shipper-portal") }}))
+2025-09-24T02:16:04.272656Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("node_modules")}
+2025-09-24T02:16:04.272675Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T02:16:04.773107Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("node_modules")}
+2025-09-24T02:16:04.773130Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T02:16:05.072355Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("package-lock.json")}
+2025-09-24T02:16:05.072380Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T02:16:32.772508Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("node_modules")}
+2025-09-24T02:16:32.772520Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T02:16:32.873389Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\package.json"), AnchoredSystemPathBuf("node_modules")}
+2025-09-24T02:16:32.873402Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }, WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T02:16:33.172298Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("package-lock.json")}
+2025-09-24T02:16:33.172316Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T02:16:39.173152Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("node_modules")}
+2025-09-24T02:16:39.173175Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T02:16:39.372321Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\shipper-portal\\package.json"), AnchoredSystemPathBuf("node_modules")}
+2025-09-24T02:16:39.372343Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }, WorkspacePackage { name: Other("@clearhaul/shipper-portal"), path: AnchoredSystemPathBuf("apps\\shipper-portal") }}))
+2025-09-24T02:16:39.773191Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("package-lock.json")}
+2025-09-24T02:16:39.773203Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T02:17:06.973632Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\components\\navigation.tsx")}
+2025-09-24T02:17:06.973644Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T02:17:19.572385Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\components\\navigation.tsx")}
+2025-09-24T02:17:19.572397Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T02:17:24.172089Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T02:17:24.172101Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T02:17:27.372770Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T02:17:27.372781Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T02:17:33.572693Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\components\\navigation.tsx")}
+2025-09-24T02:17:33.572707Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T02:17:49.073610Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\components\\navigation.tsx")}
+2025-09-24T02:17:49.073625Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T02:17:55.172725Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\components\\navigation.tsx")}
+2025-09-24T02:17:55.172741Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T02:18:05.273715Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\page.tsx")}
+2025-09-24T02:18:05.273730Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T02:18:16.474834Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\page.tsx")}
+2025-09-24T02:18:16.474847Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T02:18:38.773789Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\page.tsx")}
+2025-09-24T02:18:38.773802Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T02:19:30.775118Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\shipper-portal\\components\\ui\\input.tsx"), AnchoredSystemPathBuf("apps\\shipper-portal\\components\\ui")}
+2025-09-24T02:19:30.775130Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/shipper-portal"), path: AnchoredSystemPathBuf("apps\\shipper-portal") }}))
+2025-09-24T02:19:30.874105Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\shipper-portal\\components\\ui\\input.tsx")}
+2025-09-24T02:19:30.874126Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/shipper-portal"), path: AnchoredSystemPathBuf("apps\\shipper-portal") }}))
+2025-09-24T02:20:09.374651Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("README.md"), AnchoredSystemPathBuf("apps\\broker-console\\package.json"), AnchoredSystemPathBuf("apps\\shipper-portal\\components\\ui\\input.tsx"), AnchoredSystemPathBuf("apps\\broker-console\\components\\navigation.tsx"), AnchoredSystemPathBuf("package.json"), AnchoredSystemPathBuf("apps\\shipper-portal\\package.json"), AnchoredSystemPathBuf("apps\\broker-console\\app\\page.tsx"), AnchoredSystemPathBuf("apps\\broker-console\\app\\loadboard\\page.tsx"), AnchoredSystemPathBuf("apps\\shipper-portal\\app\\page.tsx")}
+2025-09-24T02:20:09.374671Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(All)
+2025-09-24T02:22:11.176177Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T02:22:11.176190Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T02:22:12.276466Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T02:22:12.276483Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T02:26:58.179661Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T02:26:58.179672Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T02:26:58.881101Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T02:26:58.881113Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T02:28:26.081649Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T02:28:26.081662Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T04:08:37.851185Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\monitoring\\page.tsx")}
+2025-09-24T04:08:37.851203Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T04:09:28.751451Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\monitoring\\page.tsx")}
+2025-09-24T04:09:28.751467Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T04:10:47.052393Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\monitoring\\page.tsx")}
+2025-09-24T04:10:47.052406Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T04:10:47.052424Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2025-09-24T04:13:25.853481Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\cookies\\3.cookie"), AnchoredSystemPathBuf(".turbo\\cookies")}
+2025-09-24T04:13:25.853500Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T04:14:20.155136Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\components\\navigation.tsx")}
+2025-09-24T04:14:20.155154Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T04:14:48.954269Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\components\\navigation.tsx")}
+2025-09-24T04:14:48.954284Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T04:14:48.954308Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2025-09-24T04:15:32.555355Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\cookies\\4.cookie")}
+2025-09-24T04:15:32.555367Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T04:15:32.656138Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\cookies")}
+2025-09-24T04:15:32.656150Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T04:28:26.063701Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T04:28:26.063722Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T04:28:26.164642Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T04:28:26.164656Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T04:28:27.164125Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T04:28:27.164137Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T04:31:20.266172Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T04:31:20.266194Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T04:31:20.965939Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T04:31:20.965953Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T04:36:07.269659Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T04:36:07.269675Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T04:36:07.970518Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T04:36:07.970529Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T04:38:38.670591Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\login"), AnchoredSystemPathBuf("apps\\broker-console\\app\\login\\page.tsx"), AnchoredSystemPathBuf("apps\\broker-console\\app")}
+2025-09-24T04:38:38.670605Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T04:38:38.771280Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\login\\page.tsx")}
+2025-09-24T04:38:38.771295Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T04:38:46.771796Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\components\\auth-guard.tsx"), AnchoredSystemPathBuf("apps\\broker-console\\components")}
+2025-09-24T04:38:46.771807Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T04:38:46.870596Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\components\\auth-guard.tsx")}
+2025-09-24T04:38:46.870608Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T04:38:52.972476Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\components\\navigation.tsx")}
+2025-09-24T04:38:52.972488Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T04:38:58.372142Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\components\\navigation.tsx")}
+2025-09-24T04:38:58.372157Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T04:39:03.271120Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\components\\navigation.tsx")}
+2025-09-24T04:39:03.271133Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T04:39:12.671632Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\components\\navigation.tsx")}
+2025-09-24T04:39:12.671645Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T04:39:20.171297Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\page.tsx")}
+2025-09-24T04:39:20.171310Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T04:39:32.171952Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\page.tsx")}
+2025-09-24T04:39:32.171965Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T04:39:41.872476Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\page.tsx")}
+2025-09-24T04:39:41.872488Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T04:40:18.373030Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\page.tsx")}
+2025-09-24T04:40:18.373050Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T04:40:23.173733Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\page.tsx")}
+2025-09-24T04:40:23.173756Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T04:40:54.272750Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T04:40:54.272761Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T04:40:55.174132Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T04:40:55.174143Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T04:40:59.874033Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\lib\\broker-data.ts"), AnchoredSystemPathBuf("apps\\broker-console\\lib")}
+2025-09-24T04:40:59.874047Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T04:40:59.973716Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\lib\\broker-data.ts")}
+2025-09-24T04:40:59.973728Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T04:42:08.773097Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\load-intake\\page.tsx")}
+2025-09-24T04:42:08.773117Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T04:43:10.674412Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\carrier-sourcing\\page.tsx")}
+2025-09-24T04:43:10.674426Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T04:43:18.173902Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\middleware.ts")}
+2025-09-24T04:43:18.173914Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T04:43:18.273810Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console"), AnchoredSystemPathBuf("apps\\broker-console\\middleware.ts")}
+2025-09-24T04:43:18.273830Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T04:44:26.875421Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\settlements\\page.tsx")}
+2025-09-24T04:44:26.875439Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T04:44:56.175653Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\login\\page.tsx"), AnchoredSystemPathBuf("apps\\broker-console\\components\\navigation.tsx"), AnchoredSystemPathBuf("apps\\broker-console\\lib\\broker-data.ts"), AnchoredSystemPathBuf("apps\\broker-console\\components\\auth-guard.tsx"), AnchoredSystemPathBuf("apps\\broker-console\\app\\carrier-sourcing\\page.tsx"), AnchoredSystemPathBuf("apps\\broker-console\\middleware.ts"), AnchoredSystemPathBuf("apps\\broker-console\\app\\page.tsx"), AnchoredSystemPathBuf("apps\\broker-console\\app\\load-intake\\page.tsx"), AnchoredSystemPathBuf("apps\\broker-console\\app\\settlements\\page.tsx")}
+2025-09-24T04:44:56.175668Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T04:44:56.198828Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2025-09-24T04:44:56.275450Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\settlements\\page.tsx"), AnchoredSystemPathBuf("apps\\broker-console\\app\\carrier-sourcing\\page.tsx"), AnchoredSystemPathBuf("apps\\broker-console\\app\\load-intake\\page.tsx"), AnchoredSystemPathBuf("apps\\broker-console\\middleware.ts")}
+2025-09-24T04:44:56.275469Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T04:44:56.275501Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2025-09-24T04:45:41.275960Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T04:45:41.275973Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T04:45:42.477129Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T04:45:42.477140Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T04:46:44.376533Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\dispatch\\page.tsx")}
+2025-09-24T04:46:44.376547Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T04:47:07.177800Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\monitoring\\page.tsx")}
+2025-09-24T04:47:07.177812Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T04:47:59.178095Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\monitoring\\page.tsx")}
+2025-09-24T04:47:59.178107Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T04:48:20.478778Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\monitoring\\page.tsx")}
+2025-09-24T04:48:20.478799Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T04:48:26.577598Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\monitoring\\page.tsx")}
+2025-09-24T04:48:26.577611Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T04:48:35.978639Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\monitoring\\page.tsx")}
+2025-09-24T04:48:35.978653Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T04:49:19.878564Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\monitoring\\page.tsx")}
+2025-09-24T04:49:19.878616Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T04:50:13.878893Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\delivery\\page.tsx")}
+2025-09-24T04:50:13.878908Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T04:50:28.279649Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T04:50:28.279662Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T04:50:29.380924Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T04:50:29.380942Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T04:51:13.881174Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\analytics\\page.tsx")}
+2025-09-24T04:51:13.881196Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T04:52:29.181662Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\loadboard\\page.tsx")}
+2025-09-24T04:52:29.181681Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T04:54:42.782940Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\dispatch\\page.tsx"), AnchoredSystemPathBuf("apps\\broker-console\\app\\loadboard\\page.tsx"), AnchoredSystemPathBuf("apps\\broker-console\\app\\delivery\\page.tsx"), AnchoredSystemPathBuf("apps\\broker-console\\app\\monitoring\\page.tsx"), AnchoredSystemPathBuf("apps\\broker-console\\app\\analytics\\page.tsx")}
+2025-09-24T04:54:42.782958Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T04:54:42.799615Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2025-09-24T04:55:15.283501Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T04:55:15.283511Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T04:55:16.383382Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T04:55:16.383395Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T04:58:25.885067Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T04:58:25.885080Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T05:00:02.286146Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T05:00:02.286184Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T05:00:02.985669Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T05:00:02.985690Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T05:00:03.085866Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T05:00:03.085884Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T05:03:12.288561Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\login\\page.tsx")}
+2025-09-24T05:03:12.288580Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T05:03:19.389726Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\login\\page.tsx")}
+2025-09-24T05:03:19.389740Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T05:03:25.289217Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\login\\page.tsx")}
+2025-09-24T05:03:25.289230Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T05:03:36.489231Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\components\\navigation.tsx")}
+2025-09-24T05:03:36.489243Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T05:03:42.388441Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\components\\navigation.tsx")}
+2025-09-24T05:03:42.388454Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T05:03:47.089856Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\components\\navigation.tsx")}
+2025-09-24T05:03:47.089870Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T05:04:40.488705Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\page.tsx")}
+2025-09-24T05:04:40.488717Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T05:04:47.490027Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\loadboard\\page.tsx")}
+2025-09-24T05:04:47.490046Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T05:04:49.289341Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T05:04:49.289361Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T05:04:50.390874Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T05:04:50.390886Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T05:04:54.289638Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\page.tsx")}
+2025-09-24T05:04:54.289649Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T05:05:00.189628Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\page.tsx")}
+2025-09-24T05:05:00.189641Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T05:05:34.589866Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\login\\page.tsx"), AnchoredSystemPathBuf("apps\\broker-console\\components\\navigation.tsx"), AnchoredSystemPathBuf("apps\\broker-console\\app\\loadboard\\page.tsx"), AnchoredSystemPathBuf("apps\\broker-console\\app\\page.tsx")}
+2025-09-24T05:05:34.589880Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T05:05:34.596847Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2025-09-24T05:08:59.893266Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\carrier-sourcing\\page.tsx")}
+2025-09-24T05:08:59.893282Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T05:09:10.293683Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\carrier-sourcing\\page.tsx")}
+2025-09-24T05:09:10.293704Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T05:09:20.793102Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\carrier-sourcing\\page.tsx")}
+2025-09-24T05:09:20.793118Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T05:09:27.892279Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\lib\\broker-data.ts")}
+2025-09-24T05:09:27.892293Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T05:09:36.293887Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T05:09:36.293910Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T05:09:37.392543Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T05:09:37.392554Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T05:09:54.094005Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\lib\\broker-data.ts"), AnchoredSystemPathBuf("apps\\broker-console\\app\\carrier-sourcing\\page.tsx")}
+2025-09-24T05:09:54.094017Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T05:09:54.094059Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2025-09-24T05:14:23.296481Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T05:14:23.296498Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T05:14:23.996787Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T05:14:23.996800Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T05:15:38.198567Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\page.tsx")}
+2025-09-24T05:15:38.198587Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T05:15:51.398025Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\dispatch\\page.tsx")}
+2025-09-24T05:15:51.398044Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T05:15:56.297673Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\dispatch\\page.tsx")}
+2025-09-24T05:15:56.297686Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T05:16:01.798123Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\dispatch\\page.tsx")}
+2025-09-24T05:16:01.798138Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T05:16:06.497091Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\dispatch\\page.tsx")}
+2025-09-24T05:16:06.497104Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T05:16:16.397668Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\monitoring\\page.tsx")}
+2025-09-24T05:16:16.397682Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T05:16:21.297348Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\monitoring\\page.tsx")}
+2025-09-24T05:16:21.297362Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T05:16:26.996922Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\monitoring\\page.tsx")}
+2025-09-24T05:16:26.996936Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T05:16:31.697543Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\monitoring\\page.tsx")}
+2025-09-24T05:16:31.697557Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T05:16:43.297237Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\delivery\\page.tsx")}
+2025-09-24T05:16:43.297250Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T05:16:48.297511Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\delivery\\page.tsx")}
+2025-09-24T05:16:48.297524Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T05:16:53.798129Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\delivery\\page.tsx")}
+2025-09-24T05:16:53.798150Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T05:16:58.697314Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\delivery\\page.tsx")}
+2025-09-24T05:16:58.697332Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T05:17:20.898082Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\delivery\\page.tsx"), AnchoredSystemPathBuf("apps\\broker-console\\app\\monitoring\\page.tsx"), AnchoredSystemPathBuf("apps\\broker-console\\app\\dispatch\\page.tsx"), AnchoredSystemPathBuf("apps\\broker-console\\app\\page.tsx")}
+2025-09-24T05:17:20.898099Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T05:17:20.898122Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2025-09-24T05:19:10.299189Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T05:19:10.299201Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T05:19:11.400227Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T05:19:11.400239Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T05:20:57.301422Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\vercel.json")}
+2025-09-24T05:20:57.301435Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T05:20:57.400259Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console")}
+2025-09-24T05:20:57.400273Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T05:20:57.400294Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2025-09-24T05:20:57.502016Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\vercel.json")}
+2025-09-24T05:20:57.502028Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T05:21:15.600650Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console"), AnchoredSystemPathBuf("apps\\broker-console\\.env.example")}
+2025-09-24T05:21:15.600662Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T05:21:15.701099Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\.env.example")}
+2025-09-24T05:21:15.701111Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T05:21:20.401844Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\.gitignore")}
+2025-09-24T05:21:20.401863Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T05:21:20.502176Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console")}
+2025-09-24T05:21:20.502187Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T05:21:20.502210Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2025-09-24T05:21:20.602059Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\.gitignore")}
+2025-09-24T05:21:20.602072Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T05:21:47.601756Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console"), AnchoredSystemPathBuf("apps\\broker-console\\DEPLOYMENT.md")}
+2025-09-24T05:21:47.601770Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T05:21:47.701289Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\DEPLOYMENT.md")}
+2025-09-24T05:21:47.701301Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T05:21:54.002837Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("deploy-broker-console.bat")}
+2025-09-24T05:21:54.002850Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T05:21:54.102247Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("deploy-broker-console.bat")}
+2025-09-24T05:21:54.102260Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T05:22:02.001514Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("")}
+2025-09-24T05:22:02.001527Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({}))
+2025-09-24T05:22:58.702507Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\DEPLOYMENT.md"), AnchoredSystemPathBuf("apps\\broker-console\\.gitignore"), AnchoredSystemPathBuf("apps\\broker-console\\.env.example"), AnchoredSystemPathBuf("apps\\broker-console\\vercel.json"), AnchoredSystemPathBuf("deploy-broker-console.bat")}
+2025-09-24T05:22:58.702523Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }, WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T05:22:58.702553Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2025-09-24T05:39:38.915992Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\cookies\\1.cookie")}
+2025-09-24T05:39:38.916013Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T05:39:39.214817Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\cookies")}
+2025-09-24T05:39:39.214828Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T05:42:51.217058Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\next.config.js")}
+2025-09-24T05:42:51.217075Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T05:43:05.317667Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T05:43:05.317681Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T05:43:06.317642Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T05:43:06.317656Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T05:44:59.219937Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\middleware.ts")}
+2025-09-24T05:44:59.219953Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T05:45:04.918915Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\middleware.ts")}
+2025-09-24T05:45:04.918927Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T05:45:05.019769Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console")}
+2025-09-24T05:45:05.019785Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T05:45:05.019829Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2025-09-24T05:47:52.321218Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T05:47:52.321230Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T05:47:53.422234Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T05:47:53.422244Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T05:51:46.624483Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\next.config.js")}
+2025-09-24T05:51:46.624503Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T05:51:55.924591Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\next.config.js")}
+2025-09-24T05:51:55.924605Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T05:52:39.324458Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T05:52:39.324469Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T05:52:40.024190Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T05:52:40.024203Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T05:53:16.325807Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\next.config.js")}
+2025-09-24T05:53:16.325827Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T05:53:16.825320Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\next.config.js")}
+2025-09-24T05:53:16.825339Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T05:53:16.844731Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2025-09-24T05:57:26.328178Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T05:57:26.328197Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T05:57:27.028389Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T05:57:27.028401Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T06:01:33.430524Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\page.tsx")}
+2025-09-24T06:01:33.430544Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T06:01:39.932032Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\page.tsx")}
+2025-09-24T06:01:39.932045Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T06:01:47.731414Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app"), AnchoredSystemPathBuf("apps\\broker-console\\app\\test\\page.tsx"), AnchoredSystemPathBuf("apps\\broker-console\\app\\test")}
+2025-09-24T06:01:47.731429Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T06:01:47.931837Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\test\\page.tsx")}
+2025-09-24T06:01:47.931858Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T06:02:13.331037Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T06:02:13.331049Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T06:02:14.231763Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T06:02:14.231775Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T06:03:13.532203Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\test\\page.tsx"), AnchoredSystemPathBuf("apps\\broker-console\\app\\page.tsx")}
+2025-09-24T06:03:13.532216Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T06:07:00.335842Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T06:07:00.335860Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T06:07:01.035575Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T06:07:01.035586Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T06:07:23.734812Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T06:07:23.734825Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T06:11:47.337801Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T06:11:47.337813Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T06:11:48.038220Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T06:11:48.038232Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T06:13:26.239416Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T06:13:26.239428Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T06:16:34.340821Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T06:16:34.340832Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T06:16:35.041834Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T06:16:35.041845Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T06:21:21.345137Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T06:21:21.345148Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T06:21:22.044728Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T06:21:22.044739Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T06:26:08.347530Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T06:26:08.347542Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T06:26:09.149481Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T06:26:09.149491Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T06:30:55.350677Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T06:30:55.350688Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T06:30:56.052063Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T06:30:56.052075Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T06:32:44.753130Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("")}
+2025-09-24T06:32:44.753141Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({}))
+2025-09-24T06:32:44.852294Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("desktop.ini"), AnchoredSystemPathBuf("apps\\desktop.ini"), AnchoredSystemPathBuf("apps\\carrier-app"), AnchoredSystemPathBuf("apps"), AnchoredSystemPathBuf(""), AnchoredSystemPathBuf("apps\\broker-console\\desktop.ini"), AnchoredSystemPathBuf("apps\\broker-console"), AnchoredSystemPathBuf("apps\\carrier-app\\desktop.ini")}
+2025-09-24T06:32:44.852307Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }, WorkspacePackage { name: Other("@clearhaul/carrier-app"), path: AnchoredSystemPathBuf("apps\\carrier-app") }, WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T06:32:44.856290Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2025-09-24T06:32:44.951866Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\shipper-portal\\desktop.ini"), AnchoredSystemPathBuf("apps\\shipper-portal"), AnchoredSystemPathBuf("packages\\sdk-js\\desktop.ini"), AnchoredSystemPathBuf("packages\\types\\desktop.ini"), AnchoredSystemPathBuf("packages"), AnchoredSystemPathBuf("packages\\sdk-js"), AnchoredSystemPathBuf("packages\\ui"), AnchoredSystemPathBuf("packages\\ui\\desktop.ini"), AnchoredSystemPathBuf("packages\\desktop.ini"), AnchoredSystemPathBuf("packages\\types")}
+2025-09-24T06:32:44.951880Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/types"), path: AnchoredSystemPathBuf("packages\\types") }, WorkspacePackage { name: Other("@clearhaul/sdk-js"), path: AnchoredSystemPathBuf("packages\\sdk-js") }, WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }, WorkspacePackage { name: Other("@clearhaul/ui"), path: AnchoredSystemPathBuf("packages\\ui") }, WorkspacePackage { name: Other("@clearhaul/shipper-portal"), path: AnchoredSystemPathBuf("apps\\shipper-portal") }}))
+2025-09-24T06:32:45.052852Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("sql"), AnchoredSystemPathBuf("services"), AnchoredSystemPathBuf("packages\\workers\\desktop.ini"), AnchoredSystemPathBuf("packages\\workers"), AnchoredSystemPathBuf("services\\api-gateway\\desktop.ini"), AnchoredSystemPathBuf("services\\desktop.ini"), AnchoredSystemPathBuf("services\\api-gateway")}
+2025-09-24T06:32:45.052865Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/workers"), path: AnchoredSystemPathBuf("packages\\workers") }, WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }, WorkspacePackage { name: Other("@clearhaul/api-gateway"), path: AnchoredSystemPathBuf("services\\api-gateway") }}))
+2025-09-24T06:32:45.151839Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("sql\\migrations\\desktop.ini"), AnchoredSystemPathBuf("apps\\broker-console\\app"), AnchoredSystemPathBuf("apps\\shipper-portal\\app"), AnchoredSystemPathBuf("apps\\shipper-portal\\app\\desktop.ini"), AnchoredSystemPathBuf("sql"), AnchoredSystemPathBuf("apps\\carrier-app\\app"), AnchoredSystemPathBuf("sql\\migrations"), AnchoredSystemPathBuf("sql\\desktop.ini"), AnchoredSystemPathBuf("apps\\broker-console\\app\\desktop.ini"), AnchoredSystemPathBuf("apps\\carrier-app\\app\\desktop.ini")}
+2025-09-24T06:32:45.151852Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }, WorkspacePackage { name: Other("@clearhaul/shipper-portal"), path: AnchoredSystemPathBuf("apps\\shipper-portal") }, WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }, WorkspacePackage { name: Other("@clearhaul/carrier-app"), path: AnchoredSystemPathBuf("apps\\carrier-app") }}))
+2025-09-24T06:32:45.185567Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2025-09-24T06:32:45.185610Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2025-09-24T06:32:45.185626Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2025-09-24T06:32:45.253056Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("packages\\sdk-js\\src\\desktop.ini"), AnchoredSystemPathBuf("packages\\types\\src\\desktop.ini"), AnchoredSystemPathBuf("packages\\ui\\src"), AnchoredSystemPathBuf("services\\api-gateway\\src"), AnchoredSystemPathBuf("services\\api-gateway\\src\\desktop.ini"), AnchoredSystemPathBuf("apps\\shipper-portal\\components"), AnchoredSystemPathBuf("packages\\types\\src"), AnchoredSystemPathBuf("apps\\shipper-portal\\lib\\desktop.ini"), AnchoredSystemPathBuf("packages\\sdk-js\\src"), AnchoredSystemPathBuf("apps\\shipper-portal\\lib"), AnchoredSystemPathBuf("packages\\ui\\src\\desktop.ini"), AnchoredSystemPathBuf("apps\\shipper-portal\\app"), AnchoredSystemPathBuf("apps\\shipper-portal\\app\\desktop.ini")}
+2025-09-24T06:32:45.253078Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/types"), path: AnchoredSystemPathBuf("packages\\types") }, WorkspacePackage { name: Other("@clearhaul/sdk-js"), path: AnchoredSystemPathBuf("packages\\sdk-js") }, WorkspacePackage { name: Other("@clearhaul/api-gateway"), path: AnchoredSystemPathBuf("services\\api-gateway") }, WorkspacePackage { name: Other("@clearhaul/shipper-portal"), path: AnchoredSystemPathBuf("apps\\shipper-portal") }, WorkspacePackage { name: Other("@clearhaul/ui"), path: AnchoredSystemPathBuf("packages\\ui") }}))
+2025-09-24T06:32:45.253099Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2025-09-24T06:32:45.253115Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2025-09-24T06:32:45.258881Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2025-09-24T06:32:45.299040Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2025-09-24T06:32:45.299057Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2025-09-24T06:32:45.352603Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("docs"), AnchoredSystemPathBuf("services\\api-gateway\\src\\loads"), AnchoredSystemPathBuf("docs\\desktop.ini"), AnchoredSystemPathBuf("apps\\shipper-portal\\components\\ui\\desktop.ini"), AnchoredSystemPathBuf("apps\\shipper-portal\\components\\ui"), AnchoredSystemPathBuf("apps\\shipper-portal\\components"), AnchoredSystemPathBuf("apps\\shipper-portal\\components\\desktop.ini"), AnchoredSystemPathBuf("services\\api-gateway\\src\\loads\\desktop.ini"), AnchoredSystemPathBuf("docs\\adr")}
+2025-09-24T06:32:45.352624Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/shipper-portal"), path: AnchoredSystemPathBuf("apps\\shipper-portal") }, WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }, WorkspacePackage { name: Other("@clearhaul/api-gateway"), path: AnchoredSystemPathBuf("services\\api-gateway") }}))
+2025-09-24T06:32:45.352648Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2025-09-24T06:32:45.352665Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2025-09-24T06:32:45.451867Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("infra"), AnchoredSystemPathBuf("infra\\github-actions\\desktop.ini"), AnchoredSystemPathBuf("infra\\k8s\\desktop.ini"), AnchoredSystemPathBuf("docs\\adr"), AnchoredSystemPathBuf("infra\\terraform"), AnchoredSystemPathBuf("docs\\adr\\desktop.ini"), AnchoredSystemPathBuf("infra\\k8s"), AnchoredSystemPathBuf("services\\carbon-svc"), AnchoredSystemPathBuf("infra\\github-actions"), AnchoredSystemPathBuf("docs\\runbooks\\desktop.ini"), AnchoredSystemPathBuf("docs\\runbooks"), AnchoredSystemPathBuf("infra\\terraform\\desktop.ini"), AnchoredSystemPathBuf("infra\\desktop.ini")}
+2025-09-24T06:32:45.451882Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T06:32:45.553578Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("services\\carbon-svc\\desktop.ini"), AnchoredSystemPathBuf("services\\compliance-svc"), AnchoredSystemPathBuf("services\\carbon-svc"), AnchoredSystemPathBuf("services\\compliance-svc\\desktop.ini"), AnchoredSystemPathBuf("services\\docs-svc")}
+2025-09-24T06:32:45.553595Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T06:32:45.653229Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("services\\matching-svc\\desktop.ini"), AnchoredSystemPathBuf("services\\notify-svc\\desktop.ini"), AnchoredSystemPathBuf("services\\docs-svc"), AnchoredSystemPathBuf("services\\docs-svc\\desktop.ini"), AnchoredSystemPathBuf("services\\notify-svc"), AnchoredSystemPathBuf("services\\payments-svc\\desktop.ini"), AnchoredSystemPathBuf("services\\pricing-svc"), AnchoredSystemPathBuf("services\\matching-svc"), AnchoredSystemPathBuf("services\\pricing-svc\\desktop.ini"), AnchoredSystemPathBuf("services\\payments-svc")}
+2025-09-24T06:32:45.653241Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T06:33:35.652896Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("services\\telemetry-svc"), AnchoredSystemPathBuf("services\\tender-svc"), AnchoredSystemPathBuf("sql\\migrations\\002_events_schema.sql"), AnchoredSystemPathBuf("packages\\types\\package.json"), AnchoredSystemPathBuf("services\\telemetry-svc\\desktop.ini"), AnchoredSystemPathBuf("services\\tender-svc\\desktop.ini"), AnchoredSystemPathBuf("packages\\ui\\package.json"), AnchoredSystemPathBuf("sql\\migrations\\003_analytics_schema.sql")}
+2025-09-24T06:33:35.652908Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/types"), path: AnchoredSystemPathBuf("packages\\types") }, WorkspacePackage { name: Other("@clearhaul/ui"), path: AnchoredSystemPathBuf("packages\\ui") }, WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T06:33:35.652920Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2025-09-24T06:33:35.652930Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2025-09-24T06:33:35.752765Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\shipper-portal\\app\\globals.css"), AnchoredSystemPathBuf("apps\\shipper-portal\\app\\layout.tsx"), AnchoredSystemPathBuf("services\\api-gateway\\src\\loads\\loads.controller.ts"), AnchoredSystemPathBuf("services\\api-gateway\\src\\loads\\loads.service.ts"), AnchoredSystemPathBuf("services\\api-gateway\\src\\app.module.ts"), AnchoredSystemPathBuf("services\\api-gateway\\src\\main.ts")}
+2025-09-24T06:33:35.752777Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/api-gateway"), path: AnchoredSystemPathBuf("services\\api-gateway") }, WorkspacePackage { name: Other("@clearhaul/shipper-portal"), path: AnchoredSystemPathBuf("apps\\shipper-portal") }}))
+2025-09-24T06:33:35.752789Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2025-09-24T06:33:35.752801Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2025-09-24T06:35:42.354500Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T06:35:42.354511Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T06:35:43.054551Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T06:35:43.054564Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T06:40:29.357488Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T06:40:29.357498Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T06:40:30.058066Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T06:40:30.058078Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T06:45:16.362433Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T06:45:16.362444Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T06:45:17.160961Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T06:45:17.160974Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T06:45:17.261744Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T06:45:17.261756Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T06:50:03.364619Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T06:50:03.364632Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T06:50:04.063787Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T06:50:04.063804Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T06:50:04.164947Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T06:50:04.164960Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T06:54:50.367320Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T06:54:50.367336Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T06:54:51.067979Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T06:54:51.067990Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T06:58:26.570475Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T06:58:26.570488Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T06:59:37.370864Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T06:59:37.370874Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T06:59:38.071610Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T06:59:38.071622Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T07:04:24.375174Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T07:04:24.375185Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T07:04:25.074118Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T07:04:25.074130Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T07:09:11.378643Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T07:09:11.378653Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T07:09:12.079090Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T07:09:12.079104Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T07:13:58.381240Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T07:13:58.381251Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T07:13:59.081193Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T07:13:59.081207Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T07:18:45.384179Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T07:18:45.384191Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T07:18:46.084277Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T07:18:46.084289Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T07:23:32.389154Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T07:23:32.389176Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T07:23:33.087791Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T07:23:33.087803Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T07:28:19.391379Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T07:28:19.391390Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T07:28:20.090708Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T07:28:20.090720Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T07:28:26.591938Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T07:28:26.591948Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T07:33:06.394205Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T07:33:06.394216Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T07:33:07.094069Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T07:33:07.094081Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T07:37:53.397551Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T07:37:53.397562Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T07:37:54.097839Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T07:37:54.097849Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T07:42:40.403517Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T07:42:40.403528Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T07:42:41.103236Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T07:42:41.103248Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T07:47:27.411463Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T07:47:27.411474Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T07:47:28.212611Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T07:47:28.212629Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T07:52:14.420634Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T07:52:14.420644Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T07:52:15.120882Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T07:52:15.120895Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T07:57:01.427899Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T07:57:01.427910Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T07:57:02.128171Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T07:57:02.128186Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T07:58:25.931574Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T07:58:25.931589Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T08:01:48.437607Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T08:01:48.437619Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T08:01:49.136522Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T08:01:49.136535Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T08:06:35.445536Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T08:06:35.445550Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T08:06:36.145368Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T08:06:36.145383Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T08:11:22.453784Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T08:11:22.453795Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T08:11:23.154067Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T08:11:23.154078Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T08:16:09.462314Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T08:16:09.462324Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T08:16:10.162159Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T08:16:10.162169Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T08:20:56.466913Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T08:20:56.466923Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T08:20:57.167406Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T08:20:57.167417Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T08:25:43.473037Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T08:25:43.473055Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T08:25:44.172526Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T08:25:44.172537Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T08:28:26.076314Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T08:28:26.076328Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T08:30:30.478272Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T08:30:30.478283Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T08:30:31.178603Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T08:30:31.178614Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T08:35:17.483125Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T08:35:17.483135Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T08:35:17.584715Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T08:35:17.584725Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T08:35:18.183625Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T08:35:18.183636Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T08:35:18.284168Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T08:35:18.284179Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T08:40:04.489927Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T08:40:04.489937Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T08:40:05.189022Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T08:40:05.189033Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T08:44:51.495058Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T08:44:51.495069Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T08:44:51.594963Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T08:44:51.594975Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T08:44:52.194205Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T08:44:52.194217Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T08:49:38.500773Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T08:49:38.500784Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T08:49:39.200661Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T08:49:39.200672Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T08:54:25.503792Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T08:54:25.503839Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T08:54:25.605022Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T08:54:25.605032Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T08:54:26.205411Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T08:54:26.205427Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T08:58:26.808008Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T08:58:26.808021Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T08:59:12.508395Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T08:59:12.508409Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T08:59:12.608709Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T08:59:12.608720Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T08:59:13.208724Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T08:59:13.208735Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T09:03:59.512815Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T09:03:59.512825Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T09:03:59.613279Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T09:03:59.613290Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T09:04:00.513626Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T09:04:00.513639Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T09:08:46.517371Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T09:08:46.517382Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T09:08:46.618395Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T09:08:46.618407Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T09:08:47.218209Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T09:08:47.218222Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T09:13:33.522109Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T09:13:33.522119Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T09:13:33.622754Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T09:13:33.622766Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T09:13:34.222943Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T09:13:34.222956Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T09:18:20.526981Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T09:18:20.526991Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T09:18:20.627813Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T09:18:20.627825Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T09:18:21.325835Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T09:18:21.325847Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T09:23:07.529932Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T09:23:07.529942Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T09:23:07.631274Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T09:23:07.631285Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T09:23:08.231192Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T09:23:08.231204Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T09:27:54.533856Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T09:27:54.533865Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T09:27:54.635348Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T09:27:54.635361Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T09:27:55.234058Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T09:27:55.234069Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T09:28:26.135025Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T09:28:26.135036Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T09:28:26.234945Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T09:28:26.234956Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T09:28:27.236140Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T09:28:27.236155Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T09:32:41.539007Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T09:32:41.539018Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T09:32:41.638418Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T09:32:41.638430Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T09:32:42.238682Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T09:32:42.238692Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T09:37:28.542784Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T09:37:28.542795Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T09:37:28.642145Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T09:37:28.642156Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T09:37:29.441588Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T09:37:29.441599Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T13:40:31.466677Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\cookies\\1.cookie")}
+2025-09-24T13:40:31.468104Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T13:40:31.865081Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\cookies")}
+2025-09-24T13:40:31.865097Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T13:41:25.765939Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T13:41:25.765954Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T13:41:26.865664Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T13:41:26.865676Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T13:41:54.467023Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\broker-console\\app\\login\\page.tsx"), AnchoredSystemPathBuf("apps\\broker-console\\app\\dashboard\\page.tsx"), AnchoredSystemPathBuf("apps\\broker-console\\app\\page.tsx"), AnchoredSystemPathBuf("apps\\broker-console\\components\\navigation.tsx")}
+2025-09-24T13:41:54.467042Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@clearhaul/broker-console"), path: AnchoredSystemPathBuf("apps\\broker-console") }}))
+2025-09-24T13:46:12.770776Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T13:46:12.770791Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T13:46:13.469918Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T13:46:13.469928Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T13:47:54.169975Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("")}
+2025-09-24T13:47:54.169985Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({}))
+2025-09-24T13:47:59.370175Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T13:47:59.370186Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-09-24T13:47:59.771230Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\895f3f5f5e9af4a2-turbo.log.2025-09-24")}
+2025-09-24T13:47:59.771250Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
