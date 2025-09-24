@@ -173,7 +173,6 @@ export function Navigation() {
             </div>
           </div>
         )}
-      </div>
     </nav>
   )
 }
