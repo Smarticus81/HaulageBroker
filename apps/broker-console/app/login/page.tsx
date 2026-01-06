@@ -6,29 +6,46 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Shield, Eye, EyeOff, Truck, BarChart3, Users, DollarSign } from 'lucide-react'
+import { authApi } from '@/lib/api-client'
 
 export default function LoginPage() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [showPassword, setShowPassword] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
+  const [error, setError] = useState('')
   const router = useRouter()
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsLoading(true)
-    
-    // Simulate authentication
-    setTimeout(() => {
+    setError('')
+
+    try {
+      // Try API authentication first
+      await authApi.login(email, password)
       localStorage.setItem('broker-auth', 'authenticated')
-      localStorage.setItem('broker-user', JSON.stringify({
-        name: 'Devin Anderson',
-        email: email,
-        role: 'President',
-        company: 'Anderson Direct Transport'
-      }))
       router.push('/')
-    }, 1500)
+    } catch (err: any) {
+      // Fallback to demo mode if API is unavailable
+      if (email === 'devin@andersondirect.com' && password === 'demo123') {
+        localStorage.setItem('broker-auth', 'authenticated')
+        localStorage.setItem('broker-user', JSON.stringify({
+          name: 'Devin Anderson',
+          email: email,
+          role: 'President',
+          company: 'Anderson Direct Transport'
+        }))
+        router.push('/')
+      } else if (err.message?.includes('fetch')) {
+        // Network error - use demo mode
+        setError('API unavailable. Use demo credentials to continue.')
+      } else {
+        setError(err.message || 'Invalid email or password')
+      }
+    } finally {
+      setIsLoading(false)
+    }
   }
 
   const demoLogin = () => {
@@ -74,6 +91,11 @@ export default function LoginPage() {
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleLogin} className="space-y-6">
+                  {error && (
+                    <div className="p-3 bg-red-50 border border-red-200 text-red-700 text-sm rounded-xl">
+                      {error}
+                    </div>
+                  )}
                   <div className="space-y-2">
                     <label className="text-sm font-medium text-slate-700">Email Address</label>
                     <Input

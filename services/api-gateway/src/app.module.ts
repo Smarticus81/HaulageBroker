@@ -1,6 +1,9 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { ThrottlerModule } from '@nestjs/throttler';
+import { DatabaseModule } from './database/database.module';
+import { AuthModule } from './auth/auth.module';
+import { HealthModule } from './health/health.module';
 import { LoadsModule } from './loads/loads.module';
 import { QuotesModule } from './quotes/quotes.module';
 import { TendersModule } from './tenders/tenders.module';
@@ -8,8 +11,6 @@ import { CarriersModule } from './carriers/carriers.module';
 import { ShippersModule } from './shippers/shippers.module';
 import { DocumentsModule } from './documents/documents.module';
 import { PaymentsModule } from './payments/payments.module';
-import { AuthModule } from './auth/auth.module';
-import { HealthModule } from './health/health.module';
 
 @Module({
   imports: [
@@ -22,6 +23,7 @@ import { HealthModule } from './health/health.module';
         limit: 100, // 100 requests per minute
       },
     ]),
+    DatabaseModule,
     AuthModule,
     HealthModule,
     LoadsModule,
