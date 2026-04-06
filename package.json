@@ -1,28 +1,21 @@
 {
-  "name": "anderson-direct-transport-platform",
-  "version": "0.1.0",
+  "name": "carrier-backoffice",
   "private": true,
-  "workspaces": [
-    "apps/*",
-    "services/*",
-    "packages/*"
-  ],
+  "packageManager": "pnpm@9.15.4",
   "scripts": {
     "dev": "turbo run dev",
-    "build": "turbo run build --filter=@clearhaul/broker-console --filter=@clearhaul/shipper-portal --filter=@clearhaul/carrier-app --filter=@clearhaul/types --filter=@clearhaul/ui --filter=@clearhaul/sdk-js --filter=@clearhaul/workers",
-    "build:broker": "turbo run build --filter=@clearhaul/broker-console",
-    "test": "turbo run test",
+    "build": "turbo run build",
     "lint": "turbo run lint",
-    "type-check": "turbo run type-check",
-    "clean": "turbo run clean"
+    "test": "turbo run test",
+    "db:migrate": "turbo run db:migrate --filter=@carrier-backoffice/database",
+    "db:seed": "turbo run db:seed --filter=@carrier-backoffice/database",
+    "docker:up": "docker compose up -d",
+    "docker:down": "docker compose down"
   },
   "devDependencies": {
-    "@types/node": "^20.0.0",
-    "turbo": "^1.10.0",
-    "typescript": "^5.0.0"
-  },
-  "engines": {
-    "node": ">=18.0.0",
-    "npm": ">=8.0.0"
+    "turbo": "^2.3.3",
+    "typescript": "^5.7.3",
+    "eslint": "^9.17.0",
+    "prettier": "^3.4.2"
   }
 }

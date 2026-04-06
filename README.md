@@ -1,162 +1,184 @@
-# Anderson Direct Transport - Digital Freight Brokerage Platform
+# CarrierBackOffice
 
-> **Company:** Anderson Direct Transport  
-> **Core Workflow:** Rate Quote → Load Board → Dispatch → BOL/POD → Settlement  
-> **Architecture:** Modular, service-oriented, feature-driven versioning
+Production-grade, LLM-powered trucking company **back office platform** focused on paperwork, billing support, and compliance. Explicitly excludes dispatching functionality.
 
-## 🚀 Quick Start
+## What It Does
+
+- **Document Inbox** — Upload, OCR extract, classify, and validate trucking documents (POD, BOL, Rate Confirmations, etc.)
+- **Compliance Tracking** — Monitor CDL, medical cards, insurance, inspections with automated expiry alerts
+- **Billing Paperwork** — Build invoice packets from load documents, approval workflows, CSV export
+- **Settlement Support** — Generate settlement packets with supporting documentation
+- **Automations Engine** — Rule-based triggers for missing docs, compliance expirations, billing readiness
+- **LLM Copilot** — Chat assistant with RAG over SOPs + database, tool calling with confirmation guardrails
+- **Audit Trail** — Immutable logs for every state change, automation run, and copilot action
+
+## Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| Monorepo | pnpm + Turborepo |
+| Frontend | Next.js 14 (App Router) + TypeScript + Tailwind CSS + shadcn/ui |
+| Backend | FastAPI (Python) |
+| Database | PostgreSQL 16 + pgvector |
+| Cache/Queues | Redis 7 |
+| Workflows | Temporal |
+| File Storage | S3-compatible (MinIO for local dev) |
+| Auth | JWT + RBAC (7 roles) |
+| Observability | OpenTelemetry + Sentry |
+
+## Repository Structure
+
+```
+apps/
+  backoffice/              # Main dashboard (docs, compliance, billing, automations, copilot)
+  driver-docs-portal/      # Minimal driver portal for document uploads
+services/
+  api-gateway/             # FastAPI REST API
+  docs-svc/                # Document classification + validation
+  ocr-svc/                 # OCR extraction per document type
+  compliance-svc/          # Compliance monitoring + expiry scanning
+  billing-svc/             # Invoice packet generation + export
+  settlements-svc/         # Settlement packet generation
+  automations-svc/         # Rules engine + scheduled triggers
+  llm-copilot-svc/         # RAG chat + tool calling
+  notify-svc/              # Email/SMS notifications (stub)
+  shared/                  # Shared Python utilities (DB, auth, storage, events)
+packages/
+  ui/                      # Shared React components (shadcn/ui style)
+  types/                   # Shared TypeScript types
+  sdk/                     # TypeScript API client SDK
+infra/
+  docker-compose.yml       # Postgres, Redis, MinIO, Temporal
+sql/migrations/            # Database migrations (001-011)
+docs/
+  adr/                     # Architecture Decision Records
+  runbooks/                # Operational runbooks
+  sop-samples/             # Sample SOPs for copilot RAG
+tests/
+  e2e/                     # End-to-end tests
+```
+
+## Quick Start
 
 ### Prerequisites
-- Node.js 18+ 
-- npm 8+
-- PostgreSQL 14+
-- Redis (for queues)
 
-### Installation & Startup
+- Node.js 20+
+- pnpm 9+
+- Python 3.11+
+- Docker & Docker Compose
 
-1. **Clone and install dependencies:**
-   ```bash
-   git clone <repository-url>
-   cd brokerage
-   npm install
-   ```
+### Setup
 
-2. **Start all services:**
-   ```bash
-   # Windows
-   start-clearhaul.bat
-   
-   # Or manually
-   npm run dev
-   ```
-
-3. **Access the applications:**
-   - **Shipper Portal:** http://localhost:3000
-   - **Carrier App:** http://localhost:3001  
-   - **Broker Console:** http://localhost:3002
-   - **API Gateway:** http://localhost:3003
-   - **API Documentation:** http://localhost:3003/api/docs
-
-## 🏗️ Architecture
-
-### Frontend Applications
-- **Shipper Portal** - Rate quote requests, load bookings, freight tracking, invoices, ESG reports
-- **Carrier App** - Load board access, freight tracking, BOL/POD upload, settlements
-- **Broker Console** - Exception handling, carrier vetting, disputes, settlements
-
-### Backend Services
-- **API Gateway** - Authentication, routing, rate limiting
-- **Pricing Service** - Lane rates, fuel surcharge, dynamic pricing
-- **Matching Service** - AI-powered carrier ranking and selection
-- **Load Board Service** - Load posting and carrier matching workflow
-- **Compliance Service** - TrustShield fraud detection, FMCSA compliance, OCR
-- **Settlement Service** - Apex Pay instant payments, invoicing, carrier settlements
-- **Documents Service** - BOL/POD OCR, storage, e-signatures
-- **Telemetry Service** - GPS tracking, ETA calculations, exceptions
-- **Carbon Service** - CO₂ calculations, ESG reporting
-- **Notify Service** - Email/SMS/push notifications, webhooks
-
-### Shared Packages
-- **@clearhaul/types** - Zod schemas and TypeScript types
-- **@clearhaul/ui** - Shared UI components (shadcn/ui)
-- **@clearhaul/sdk-js** - TypeScript SDK for API integration
-- **@clearhaul/workers** - Background job processing
-
-## 📊 Core Workflows
-
-### 1. Brokering Flow
-```
-Shipper Request → Rate Quote → Load Board Posting → 
-Carrier Booking → Dispatch → GPS Tracking → BOL/POD Upload → 
-Auto-Invoice → Apex Pay Settlement
-```
-
-### 2. TrustShield (Fraud Prevention)
-```
-Multi-factor Identity → MC# Verification → DOT# Validation → Bank Validation → 
-Phone Verification → AI Anomaly Detection → Trust Score
-```
-
-### 3. Apex Pay (Financial Velocity)
-```
-Instant RTP/ACH → Low-fee Factoring → Automated Invoicing → 
-Quick-Pay Options → Real-time Carrier Settlement
-```
-
-## 🛡️ Security & Compliance
-
-- **Authentication:** JWT with short TTL, mTLS for service communication
-- **Authorization:** Role-based access control (RBAC)
-- **Data Protection:** PII encryption at rest, signed S3 URLs
-- **Audit:** Immutable audit logs, event sourcing
-- **Compliance:** FMCSA authority verification, ESG (CSRD), SOC2 ready
-
-## 📈 Analytics & ESG
-
-- **Performance Metrics:** On-time delivery rates, damage rates, carrier performance scores
-- **Market Intelligence:** Lane analytics, rate forecasting
-- **Carbon Tracking:** CO₂ per load, ESG compliance reports
-- **Business Intelligence:** Margin analysis, SLA dashboards
-
-## 🚀 Deployment
-
-### Development
 ```bash
-npm run dev          # Start all services
-npm run build        # Build all packages
-npm run test         # Run all tests
-npm run lint         # Lint all code
+# 1. Clone and enter the repo
+git clone <repo-url> && cd HaulageBroker
+
+# 2. Copy environment config
+cp .env.example .env
+
+# 3. Start infrastructure
+docker compose -f infra/docker-compose.yml up -d
+
+# 4. Install Node dependencies
+pnpm install
+
+# 5. Run database migrations
+psql $DATABASE_URL -f sql/migrations/001_extensions.sql
+psql $DATABASE_URL -f sql/migrations/002_core_tables.sql
+# ... through 011_seed_data.sql
+# Or run all at once:
+for f in sql/migrations/*.sql; do psql $DATABASE_URL -f "$f"; done
+
+# 6. Install Python dependencies
+pip install -r services/requirements.txt
+
+# 7. Start the API gateway
+cd services/api-gateway && uvicorn main:app --reload --port 8000
+
+# 8. Start the backoffice UI (in another terminal)
+pnpm --filter @carrier/backoffice dev
+
+# 9. Start the driver portal (in another terminal)
+pnpm --filter @carrier/driver-docs-portal dev
 ```
 
-### Production
+### Access
+
+| Service | URL |
+|---------|-----|
+| Backoffice UI | http://localhost:3000 |
+| Driver Portal | http://localhost:3001 |
+| API Gateway | http://localhost:8000 |
+| API Docs (Swagger) | http://localhost:8000/docs |
+| MinIO Console | http://localhost:9001 |
+| Temporal UI | http://localhost:8080 |
+
+### Default Users
+
+| Email | Password | Role |
+|-------|----------|------|
+| admin@acme.com | password123 | admin |
+| billing@acme.com | password123 | billing |
+| compliance@acme.com | password123 | compliance |
+| safety@acme.com | password123 | safety |
+| backoffice@acme.com | password123 | backoffice |
+| driver1@acme.com | password123 | driver_readonly |
+
+## RBAC Roles
+
+| Role | Permissions |
+|------|------------|
+| admin | Full access to all features |
+| backoffice | Document management, load records, tasks |
+| billing | Invoice packets, settlements, billing tasks |
+| compliance | Compliance artifacts, rules, safety tasks |
+| safety | Compliance monitoring (read-heavy) |
+| auditor | Read-only access to all data + audit logs |
+| driver_readonly | View own loads, upload requested documents |
+
+## Default Automations
+
+1. **POD Chase** — If delivery passed and no POD within 12h, create document request + reminder every 24h
+2. **Rate Confirmation Required** — If load created and no RateConf in 2h, create billing task
+3. **Validation Mismatch** — If extracted amount differs from load amount by >2%, raise exception
+4. **Compliance Expirations** — Daily scan for items expiring in 30/14/7 days, notify + create tasks
+5. **Invoice Packet Readiness** — When all required docs present and valid, mark packet ready
+6. **Weekly Settlement** — Generate settlement packets with missing docs list
+
+## Document Pipeline
+
+```
+Upload → Classify → OCR/Extract → Validate → Link → Ready
+                                      ↓
+                              Exception → Task → Notify
+```
+
+## Testing
+
 ```bash
-npm run build
-npm run start:prod
+# Unit tests
+pytest services/ -v
+
+# E2E tests (requires running services)
+pytest tests/e2e/ -v -m e2e
 ```
 
-## 📋 Roadmap
+## API Endpoints
 
-- **v0.1** - Brokering Core (pricing, matching, load board, BOL/POD, sandbox settlements)
-- **v0.2** - Compliance & Trust (TrustShield, fraud detection, FMCSA verification)
-- **v0.3** - Telemetry & Exceptions (GPS, ETA, exception handling)
-- **v0.4** - Analytics & ESG (dashboards, CO₂ tracking)
-- **v0.5** - Dynamic Pricing v2 (LightGBM models, forecasting)
-- **v0.6** - Fintech Rails (instant payments, factoring)
-- **v0.7** - Load Board APIs (DAT/Truckstop integration)
-- **v1.0** - GA (SSO, audit logs, settlements, SLA guarantees)
+See full OpenAPI docs at http://localhost:8000/docs when the API is running.
 
-## 💰 Business Model
+Key endpoints:
+- `POST /load-records` — Create load record
+- `POST /documents/upload` — Upload document (multipart)
+- `POST /documents/{id}/classify` — Classify document type
+- `POST /documents/{id}/extract` — Extract fields via OCR
+- `POST /documents/{id}/validate` — Validate against load
+- `GET /compliance/expiring` — Get expiring compliance items
+- `POST /invoice-packets/generate` — Generate invoice packet
+- `POST /invoice-packets/{id}/approve` — Approve invoice packet
+- `POST /copilot/chat` — Chat with LLM copilot
+- `GET /audit-logs` — Query audit trail
 
-### Revenue Streams
-1. **Commission:** 15% take on gross margin
-2. **Apex Pay:** 2.5% instant settlement fees
-3. **SaaS Tiers:**
-   - Freemium: Basic load board access
-   - Pro ($150/mo): Workflow + TrustShield
-   - Enterprise ($300/mo): Pro + Apex IQ + ESG
+## Architecture Decisions
 
-### 5-Year Projections
-- **Year 5 GMV:** $11.5B
-- **Total Revenue:** ~$194M
-- **Gross Margin:** ~85%
-- **EBITDA Positive:** Year 3
-
-## 🔧 Technology Stack
-
-- **Frontend:** Next.js 15, TypeScript, Tailwind, shadcn/ui, React Query
-- **Backend:** NestJS, FastAPI, event-driven architecture
-- **Database:** PostgreSQL + pgvector, Redis cache
-- **AI/ML:** Heuristics → LightGBM, OR-Tools, OpenAI embeddings
-- **Infrastructure:** AWS (EKS/RDS/S3/MSK), Terraform, Kubernetes
-- **Observability:** OpenTelemetry, Grafana, Sentry
-
-## 📞 Support
-
-For technical support or business inquiries:
-- **Email:** support@clearhaul.com
-- **Documentation:** [docs.clearhaul.com](https://docs.clearhaul.com)
-- **Status:** [status.clearhaul.com](https://status.clearhaul.com)
-
----
-
-**Clearhaul** - Transforming freight transportation through technology, trust, and transparency.
+See [docs/adr/](docs/adr/) for Architecture Decision Records.
