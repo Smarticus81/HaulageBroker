@@ -26,6 +26,7 @@ interface RunHistoryEntry {
   triggeredAt: string;
   triggerData: string;
   actionsExecuted: string;
+  [key: string]: unknown;
 }
 
 const mockRules: AutomationRule[] = [
@@ -147,7 +148,7 @@ export default function AutomationsPage() {
       )}
 
       {activeTab === 'Run History' && (
-        <DataTable columns={historyColumns} data={mockHistory as unknown as Record<string, unknown>[]} keyExtractor={(row: Record<string, unknown>) => row.id as string} />
+        <DataTable columns={historyColumns} data={mockHistory} keyExtractor={(row) => row.id} />
       )}
 
       {/* Create Rule Form */}
