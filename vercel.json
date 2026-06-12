@@ -1,15 +1,6 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "apps/broker-console/package.json",
-      "use": "@vercel/next"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "apps/broker-console/$1"
-    }
-  ]
+  "buildCommand": "pnpm turbo build --filter=@carrier/backoffice",
+  "installCommand": "pnpm install",
+  "framework": "nextjs",
+  "outputDirectory": "apps/backoffice/.next"
 }
