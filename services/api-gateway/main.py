@@ -1,4 +1,4 @@
-"""CarrierBackOffice API Gateway - main FastAPI application."""
+"""Haulage API Gateway - main FastAPI application."""
 
 from __future__ import annotations
 
@@ -13,13 +13,17 @@ from .routers import (
     auth_routes,
     audit,
     automations,
+    autopilot,
     billing,
+    business_plan,
     compliance,
     copilot,
     document_requests,
     documents,
     exceptions,
     load_records,
+    onboarding,
+    plans,
     settlements,
     tasks,
 )
@@ -49,9 +53,12 @@ if _otel_enabled:
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(name)s %(levelname)s %(message)s")
 
 app = FastAPI(
-    title="CarrierBackOffice API",
-    version="0.1.0",
-    description="Unified back-office platform for small/mid-size trucking carriers.",
+    title="Haulage API",
+    version="0.2.0",
+    description=(
+        "Haulage - the autonomous back office for carriers. Paperwork, billing, "
+        "compliance and cash planning run on autopilot; every action leaves a receipt."
+    ),
 )
 
 # CORS
@@ -82,6 +89,10 @@ app.include_router(settlements.router, prefix="/settlement-packets", tags=["Sett
 app.include_router(automations.router, prefix="/automations", tags=["Automations"])
 app.include_router(copilot.router, prefix="/copilot", tags=["Copilot"])
 app.include_router(audit.router, prefix="/audit-logs", tags=["Audit"])
+app.include_router(plans.router, prefix="/plans", tags=["Plans"])
+app.include_router(onboarding.router, prefix="/onboarding", tags=["Onboarding"])
+app.include_router(business_plan.router, prefix="/business-plan", tags=["Business Plan"])
+app.include_router(autopilot.router, prefix="/autopilot", tags=["Autopilot"])
 
 
 @app.get("/health", tags=["Health"])

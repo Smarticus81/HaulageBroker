@@ -1,184 +1,112 @@
-# CarrierBackOffice
+# Haulage
 
-Production-grade, LLM-powered trucking company **back office platform** focused on paperwork, billing support, and compliance. Explicitly excludes dispatching functionality.
+**The autonomous back office for carriers.** Paperwork, billing, compliance and
+cash planning that run themselves, for trucking companies with 1 to 50 trucks.
+Set up by talking for seven minutes. Then watch the ledger fill.
 
-## What It Does
+> Formerly CarrierBackOffice. See [docs/business-model.md](docs/business-model.md)
+> for the lean model this version implements and [docs/design-system.md](docs/design-system.md)
+> for the visual language.
 
-- **Document Inbox** — Upload, OCR extract, classify, and validate trucking documents (POD, BOL, Rate Confirmations, etc.)
-- **Compliance Tracking** — Monitor CDL, medical cards, insurance, inspections with automated expiry alerts
-- **Billing Paperwork** — Build invoice packets from load documents, approval workflows, CSV export
-- **Settlement Support** — Generate settlement packets with supporting documentation
-- **Automations Engine** — Rule-based triggers for missing docs, compliance expirations, billing readiness
-- **LLM Copilot** — Chat assistant with RAG over SOPs + database, tool calling with confirmation guardrails
-- **Audit Trail** — Immutable logs for every state change, automation run, and copilot action
+## What it does
 
-## Tech Stack
+| Room | What happens there |
+|---|---|
+| **Today** | The morning list: what Autopilot did (with receipts and time saved), the few decisions that need you, cash, loads on the road, the compliance horizon. |
+| **Loads** | Every haul from booked to paid, with a paperwork packet per load and a moving route ribbon for loads in transit. |
+| **Inbox** | Paperwork as it arrives by email, photo, portal or the driver app. Classified, extracted, and linked to loads above a confidence bar you set. |
+| **Money** | Invoices go out when packets are complete. Days-to-cash by customer, aging, quick-pay routing for slow payers, weekly settlements. |
+| **Compliance** | CDLs, medical cards, inspections, IFTA, 2290, insurance on a 120-day horizon with alerts at 30, 14, 7 and 1 days. |
+| **Autopilot** | The control plane: suggest / act / full autonomy, the policies that bound it, and the ledger of everything it did. |
+| **Plan** | A living business plan: cost per mile, break-even, cash runway, twelve-month projection, and what-if levers, recomputed as loads close. |
+| **Driver app** | A phone page with no login. Snap the POD at the dock; the invoice goes out before the truck leaves the lot. |
+| **Copilot** | Ask anything about the business, by voice or text. Confirms before it acts. `⌘K` for the command bar, `⌘J` for the drawer. |
+
+## Business model in one paragraph
+
+Product-led and self-serve, priced per truck per month (Solo free for one truck,
+Fleet $39, Autopilot $79), no seats and no per-document fees. Onboarding is a
+voice-guided conversation that produces the workspace and the first business
+plan. Autopilot acts within explicit policies and leaves a receipt for every
+action. Full details, plan limits, the onboarding profile, the business plan
+engine formulas and the policy catalogue are in `docs/business-model.md`.
+
+## Stack
 
 | Layer | Technology |
-|-------|-----------|
-| Monorepo | pnpm + Turborepo |
-| Frontend | Next.js 14 (App Router) + TypeScript + Tailwind CSS + shadcn/ui |
-| Backend | FastAPI (Python) |
-| Database | PostgreSQL 16 + pgvector |
-| Cache/Queues | Redis 7 |
-| Workflows | Temporal |
-| File Storage | S3-compatible (MinIO for local dev) |
-| Auth | JWT + RBAC (7 roles) |
-| Observability | OpenTelemetry + Sentry |
+|---|---|
+| Web | Next.js 16 (App Router, Turbopack), React 19, Tailwind CSS 4, Motion, Recharts 3, Zustand |
+| Type + fonts | Geist Sans / Geist Mono, Instrument Serif; OKLCH tokens, hand-tuned light and dark |
+| Voice | Web Speech API (synthesis + recognition) with a deterministic NLU in `packages/core` |
+| Shared | `@haulage/core` (business plan engine, plan catalogue, NLU) · `@haulage/types` |
+| API | FastAPI (Python 3.11), SQLAlchemy 2 async, PostgreSQL 16 + pgvector, Redis, Temporal, S3-compatible storage |
+| Auth | JWT + RBAC |
+| Monorepo | pnpm workspaces + Turborepo |
 
-## Repository Structure
+## Repository layout
 
 ```
-apps/
-  backoffice/              # Main dashboard (docs, compliance, billing, automations, copilot)
-  driver-docs-portal/      # Minimal driver portal for document uploads
-services/
-  api-gateway/             # FastAPI REST API
-  docs-svc/                # Document classification + validation
-  ocr-svc/                 # OCR extraction per document type
-  compliance-svc/          # Compliance monitoring + expiry scanning
-  billing-svc/             # Invoice packet generation + export
-  settlements-svc/         # Settlement packet generation
-  automations-svc/         # Rules engine + scheduled triggers
-  llm-copilot-svc/         # RAG chat + tool calling
-  notify-svc/              # Email/SMS notifications (stub)
-  shared/                  # Shared Python utilities (DB, auth, storage, events)
-packages/
-  ui/                      # Shared React components (shadcn/ui style)
-  types/                   # Shared TypeScript types
-  sdk/                     # TypeScript API client SDK
-infra/
-  docker-compose.yml       # Postgres, Redis, MinIO, Temporal
-sql/migrations/            # Database migrations (001-011)
-docs/
-  adr/                     # Architecture Decision Records
-  runbooks/                # Operational runbooks
-  sop-samples/             # Sample SOPs for copilot RAG
-tests/
-  e2e/                     # End-to-end tests
+apps/web/                    Next.js app: marketing site, /start onboarding, /app shell, /driver
+  src/app/                   routes (/, /pricing, /start, /login, /driver, /app/*)
+  src/components/ui/         design-system primitives
+  src/components/shell/      sidebar, top bar, command palette, copilot drawer
+  src/lib/data/              coherent demo fleet used when NEXT_PUBLIC_API_URL is unset
+packages/core/               business plan engine, plan catalogue, spoken-answer parser (+ vitest)
+packages/types/              shared TypeScript types
+services/api-gateway/        FastAPI REST API (routers incl. /onboarding, /business-plan, /autopilot, /plans)
+services/business-plan-svc/  Python mirror of the plan engine (+ pytest, same fixtures)
+services/*-svc/              documents, OCR, compliance, billing, settlements, automations, copilot, notify
+sql/migrations/              001–012 (012 = lean model: subscriptions, onboarding, plans, autopilot)
+docs/                        business model, design system, ADRs 001–008, runbooks, SOP samples
+infra/                       docker-compose for Postgres, Redis, MinIO, Temporal
 ```
 
-## Quick Start
+The previous UI (`apps/backoffice`, `apps/driver-docs-portal`) and the old
+`packages/ui` / `packages/sdk` are no longer part of the workspace and can be
+deleted.
 
-### Prerequisites
-
-- Node.js 20+
-- pnpm 9+
-- Python 3.11+
-- Docker & Docker Compose
-
-### Setup
+## Quick start
 
 ```bash
-# 1. Clone and enter the repo
-git clone <repo-url> && cd HaulageBroker
-
-# 2. Copy environment config
-cp .env.example .env
-
-# 3. Start infrastructure
-docker compose -f infra/docker-compose.yml up -d
-
-# 4. Install Node dependencies
 pnpm install
-
-# 5. Run database migrations
-psql $DATABASE_URL -f sql/migrations/001_extensions.sql
-psql $DATABASE_URL -f sql/migrations/002_core_tables.sql
-# ... through 011_seed_data.sql
-# Or run all at once:
-for f in sql/migrations/*.sql; do psql $DATABASE_URL -f "$f"; done
-
-# 6. Install Python dependencies
-pip install -r services/requirements.txt
-
-# 7. Start the API gateway
-cd services/api-gateway && uvicorn main:app --reload --port 8000
-
-# 8. Start the backoffice UI (in another terminal)
-pnpm --filter @carrier/backoffice dev
-
-# 9. Start the driver portal (in another terminal)
-pnpm --filter @carrier/driver-docs-portal dev
+pnpm --filter @haulage/web dev          # http://localhost:3000, runs on the demo fleet
+pnpm --filter @haulage/core test        # engine + NLU tests
 ```
 
-### Access
-
-| Service | URL |
-|---------|-----|
-| Backoffice UI | http://localhost:3000 |
-| Driver Portal | http://localhost:3001 |
-| API Gateway | http://localhost:8000 |
-| API Docs (Swagger) | http://localhost:8000/docs |
-| MinIO Console | http://localhost:9001 |
-| Temporal UI | http://localhost:8080 |
-
-### Default Users
-
-| Email | Password | Role |
-|-------|----------|------|
-| admin@acme.com | password123 | admin |
-| billing@acme.com | password123 | billing |
-| compliance@acme.com | password123 | compliance |
-| safety@acme.com | password123 | safety |
-| backoffice@acme.com | password123 | backoffice |
-| driver1@acme.com | password123 | driver_readonly |
-
-## RBAC Roles
-
-| Role | Permissions |
-|------|------------|
-| admin | Full access to all features |
-| backoffice | Document management, load records, tasks |
-| billing | Invoice packets, settlements, billing tasks |
-| compliance | Compliance artifacts, rules, safety tasks |
-| safety | Compliance monitoring (read-heavy) |
-| auditor | Read-only access to all data + audit logs |
-| driver_readonly | View own loads, upload requested documents |
-
-## Default Automations
-
-1. **POD Chase** — If delivery passed and no POD within 12h, create document request + reminder every 24h
-2. **Rate Confirmation Required** — If load created and no RateConf in 2h, create billing task
-3. **Validation Mismatch** — If extracted amount differs from load amount by >2%, raise exception
-4. **Compliance Expirations** — Daily scan for items expiring in 30/14/7 days, notify + create tasks
-5. **Invoice Packet Readiness** — When all required docs present and valid, mark packet ready
-6. **Weekly Settlement** — Generate settlement packets with missing docs list
-
-## Document Pipeline
-
-```
-Upload → Classify → OCR/Extract → Validate → Link → Ready
-                                      ↓
-                              Exception → Task → Notify
-```
-
-## Testing
+With the API:
 
 ```bash
-# Unit tests
-pytest services/ -v
-
-# E2E tests (requires running services)
-pytest tests/e2e/ -v -m e2e
+cp .env.example .env
+docker compose -f infra/docker-compose.yml up -d
+for f in sql/migrations/*.sql; do psql "$DATABASE_URL" -f "$f"; done
+pip install -r services/requirements.txt
+cd services/api-gateway && uvicorn main:app --reload --port 8000
+# then set NEXT_PUBLIC_API_URL=http://localhost:8000 for the web app
+python3 -m pytest services -q           # backend tests
 ```
 
-## API Endpoints
+Demo sign-in: any email and password on `/login`, or "Try the demo". Voice
+onboarding lives at `/start` and works best in Chrome, Edge or Safari.
 
-See full OpenAPI docs at http://localhost:8000/docs when the API is running.
+## Key API endpoints
 
-Key endpoints:
-- `POST /load-records` — Create load record
-- `POST /documents/upload` — Upload document (multipart)
-- `POST /documents/{id}/classify` — Classify document type
-- `POST /documents/{id}/extract` — Extract fields via OCR
-- `POST /documents/{id}/validate` — Validate against load
-- `GET /compliance/expiring` — Get expiring compliance items
-- `POST /invoice-packets/generate` — Generate invoice packet
-- `POST /invoice-packets/{id}/approve` — Approve invoice packet
-- `POST /copilot/chat` — Chat with LLM copilot
-- `GET /audit-logs` — Query audit trail
+- `GET /plans/` plan catalogue · `GET|PUT /plans/subscription`
+- `GET|PUT /onboarding/` · `POST /onboarding/complete` → `{profile, plan}`
+- `GET /business-plan/` · `GET /business-plan/history` · `POST /business-plan/recompute` · `POST /business-plan/preview`
+- `GET|PUT /autopilot/policies` · `GET /autopilot/events` · `GET /autopilot/summary` · `POST /autopilot/events/{id}/resolve`
+- Existing: load records, documents, compliance, billing, settlements, automations, copilot, audit logs
 
-## Architecture Decisions
+Swagger at `http://localhost:8000/docs` when the API is running.
 
-See [docs/adr/](docs/adr/) for Architecture Decision Records.
+## Design rules
+
+Read `docs/design-system.md` before adding a screen. In short: warm bone by
+day, deep asphalt by night, one signal accent; hairline surfaces; serif display
+titles; mono labels and tabular numbers; springs, not fades; and Autopilot
+speaks in receipts.
+
+## Architecture decisions
+
+`docs/adr/` — 001 FastAPI, 002 Temporal, 003 document pipeline, 004 RBAC,
+005 copilot guardrails, 006 lean business model, 007 voice-guided onboarding,
+008 business plan engine.

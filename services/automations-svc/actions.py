@@ -206,3 +206,25 @@ _EXECUTORS = {
     "generate_invoice_packet": _generate_invoice_packet,
     "add_exception_note": _add_exception_note,
 }
+
+
+class ActionExecutor:
+    """Session-bound wrapper around :func:`execute_action`.
+
+    Lets callers hold one executor per run instead of threading the session
+    through every call; ``supported_actions`` is handy for rule validation.
+    """
+
+    def __init__(self, db: AsyncSession | None = None) -> None:
+        self.db = db
+
+    @staticmethod
+    def supported_actions() -> list[str]:
+        return sorted(_EXECUTORS)
+
+    async def execute(
+        self, action_def: dict[str, Any], trigger_data: dict[str, Any], org_id: UUID
+    ) -> dict[str, Any]:
+        if self.db is None:
+            raise RuntimeError("ActionExecutor needs a database session to execute actions")
+        return await execute_action(self.db, action_def, trigger_data, org_id)

@@ -86,3 +86,68 @@ async def scan_expiring_artifacts(
 
     await db.commit()
     return items
+
+
+def classify_urgency(days_remaining: int) -> str:
+    """Map days until expiry to a severity bucket (expired counts as critical)."""
+    if days_remaining <= 7:
+        return "critical"
+    if days_remaining <= 14:
+        return "high"
+    if days_remaining <= 30:
+        return "medium"
+    return "low"
+
+
+class ComplianceScanner:
+    """Pure-Python expiry scan over artifact dicts, no database required.
+
+    ``scan_expiring_artifacts`` above is the DB-backed entry point; this class
+    applies the same window/status rules to artifacts the caller already holds.
+    """
+
+    ACTIVE_STATUSES = ("active", "expiring_soon", "expired")
+
+    def find_expiring(
+        self,
+        artifacts: list[dict[str, Any]],
+        days_ahead: int = 30,
+        today: date | None = None,
+    ) -> list[dict[str, Any]]:
+        """Return artifacts expiring within ``days_ahead`` days, soonest first.
+
+        Revoked/pending artifacts and artifacts without an expiry date are
+        skipped; already-expired artifacts are included (negative days).
+        """
+        today = today or date.today()
+        expiring: list[dict[str, Any]] = []
+        for artifact in artifacts:
+            if artifact.get("status", "active") not in self.ACTIVE_STATUSES:
+                continue
+            expiry = _coerce_date(artifact.get("expiry_date"))
+            if expiry is None:
+                continue
+            days_remaining = (expiry - today).days
+            if days_remaining > days_ahead:
+                continue
+            item = dict(artifact)
+            item["days_remaining"] = days_remaining
+            item["severity"] = self.classify_urgency(days_remaining)
+            expiring.append(item)
+        expiring.sort(key=lambda item: item["days_remaining"])
+        return expiring
+
+    @staticmethod
+    def classify_urgency(days_remaining: int) -> str:
+        return classify_urgency(days_remaining)
+
+
+def _coerce_date(value: Any) -> date | None:
+    if value is None:
+        return None
+    if isinstance(value, date):
+        return value
+    try:
+        return date.fromisoformat(str(value)[:10])
+    except ValueError:
+        return None

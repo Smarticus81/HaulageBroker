@@ -6,7 +6,7 @@ from datetime import date, datetime
 from uuid import UUID
 
 from fastapi import APIRouter, Depends, Query
-from pydantic import BaseModel
+from pydantic import AliasChoices, BaseModel, Field
 from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -31,7 +31,7 @@ class AuditLogResponse(BaseModel):
     entity_id: UUID | None = None
     before_state: dict | None = None
     after_state: dict | None = None
-    metadata: dict = {}
+    metadata: dict = Field(default_factory=dict, validation_alias=AliasChoices("metadata_", "metadata"))
     ip_address: str | None = None
     source: str | None = None
     created_at: datetime

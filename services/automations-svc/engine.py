@@ -18,11 +18,36 @@ from .actions import execute_action
 logger = logging.getLogger(__name__)
 
 
+def _rule_value(rule: Any, key: str, default: Any = None) -> Any:
+    """Read a rule field from a dict or ORM row, unwrapping enums."""
+    value = rule.get(key, default) if isinstance(rule, dict) else getattr(rule, key, default)
+    return getattr(value, "value", value)
+
+
 class AutomationEngine:
     """Evaluates automation rules against events or on schedules."""
 
-    def __init__(self, db: AsyncSession) -> None:
+    def __init__(self, db: AsyncSession | None = None) -> None:
         self.db = db
+
+    @staticmethod
+    def match_rules(rules: list[Any], event_type: str) -> list[Any]:
+        """Return the active event rules that listen to ``event_type``.
+
+        Pure function over rule dicts or ``AutomationRule`` rows; used by
+        ``evaluate_event_rules`` after loading rules and directly by tests.
+        """
+        matched = []
+        for rule in rules:
+            trigger_type = _rule_value(rule, "trigger_type")
+            if trigger_type != "event":
+                continue
+            if not _rule_value(rule, "is_active", True):
+                continue
+            if _rule_value(rule, "trigger_event") != event_type:
+                continue
+            matched.append(rule)
+        return matched
 
     async def evaluate_event_rules(
         self, event_type: str, payload: dict[str, Any]
@@ -43,7 +68,7 @@ class AutomationEngine:
                 AutomationRule.is_active == True,  # noqa: E712
             )
         )
-        rules = result.scalars().all()
+        rules = self.match_rules(list(result.scalars().all()), event_type)
 
         runs = []
         matched = 0
