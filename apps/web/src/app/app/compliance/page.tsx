@@ -269,30 +269,66 @@ function HorizonLegend() {
 
 type Placed = { c: ComplianceItem; x: number; row: number; flip: boolean; days: number };
 
+const LABEL_BREAKPOINT = 768; // labels render from md up; below that only the marker shows
+const CHAR_PX = 6.7; // 11px Geist Mono advance width
+const labelText = (c: ComplianceItem, days: number) => `${c.type}${shortSubject(c) ? ` · ${shortSubject(c)}` : ''} ${days < 0 ? `${-days}d ago` : `${days}d`}`;
+
+/**
+ * Lays one lane out: markers by days-out, labels flipped to the left when they
+ * would run off the track, and stacked into rows only when they would collide.
+ */
+function layoutLane(items: ComplianceItem[], trackW: number, viewportW: number): Placed[] {
+  const showLabels = viewportW >= LABEL_BREAKPOINT;
+  const rows: [number, number][][] = [];
+  const out: Placed[] = [];
+  for (const c of items) {
+    const d = daysOut(c.expiresAt);
+    const x = Math.max(0, Math.min(HORIZON, d)) / HORIZON;
+    const px = x * trackW;
+    const labelPx = showLabels ? 32 + labelText(c, d).length * CHAR_PX : 22;
+    const flip = px + labelPx > trackW && px - labelPx >= 0;
+    const span: [number, number] = flip ? [px - labelPx, px + 11] : [px - 11, px + labelPx];
+    let row = rows.findIndex((r) => r.every(([a, b]) => span[1] + 6 < a || span[0] - 6 > b));
+    if (row === -1) {
+      row = Math.min(rows.length, 2);
+      if (row === rows.length) rows.push([]);
+    }
+    rows[row].push(span);
+    out.push({ c, x, row, flip, days: d });
+  }
+  return out;
+}
+
 function Horizon({ items, onPick }: { items: ComplianceItem[]; onPick: (c: ComplianceItem) => void }) {
   const ticks = [0, 30, 60, 90, 120];
+  const trackRef = useRef<HTMLDivElement>(null);
+  const [size, setSize] = useState({ track: 1000, viewport: 1280 });
+
+  useEffect(() => {
+    const el = trackRef.current;
+    if (!el) return;
+    const measure = () => setSize({ track: el.getBoundingClientRect().width || 1000, viewport: window.innerWidth });
+    measure();
+    const ro = new ResizeObserver(measure);
+    ro.observe(el);
+    window.addEventListener('resize', measure);
+    return () => {
+      ro.disconnect();
+      window.removeEventListener('resize', measure);
+    };
+  }, []);
+
   const lanes = LANES.map((lane) => {
     const mine = items.filter((c) => c.subjectType === lane.key).sort((a, b) => a.expiresAt.localeCompare(b.expiresAt));
-    const placed: Placed[] = [];
-    let lastX = -Infinity;
-    let lastRow = 1;
-    for (const c of mine) {
-      const d = daysOut(c.expiresAt);
-      const x = Math.max(0, Math.min(HORIZON, d)) / HORIZON;
-      // Two rows per lane; alternate when a label would collide with its neighbour.
-      const row = x - lastX < 0.3 ? (lastRow === 0 ? 1 : 0) : 0;
-      placed.push({ c, x, row, flip: x > 0.72, days: d });
-      lastX = x;
-      lastRow = row;
-    }
-    return { ...lane, placed, twoRows: placed.some((p) => p.row === 1) };
+    const placed = layoutLane(mine, size.track, size.viewport);
+    return { ...lane, placed, rows: Math.max(1, ...placed.map((p) => p.row + 1)) };
   });
 
   return (
     <div className="grid grid-cols-[72px_1fr] gap-x-3 sm:grid-cols-[88px_1fr]">
       {/* Axis */}
       <div />
-      <div className="relative h-5">
+      <div ref={trackRef} className="relative h-5">
         {ticks.map((t) => (
           <span key={t} className={cn('absolute top-0 font-mono text-[10.5px] tabular text-ink-4', t === 0 ? 'left-0' : t === HORIZON ? 'right-0' : '-translate-x-1/2')} style={t === 0 || t === HORIZON ? undefined : { left: `${(t / HORIZON) * 100}%` }}>
             {t === 0 ? 'Today' : `+${t}d`}
@@ -307,15 +343,17 @@ function Horizon({ items, onPick }: { items: ComplianceItem[]; onPick: (c: Compl
   );
 }
 
-function LaneRow({ lane, ticks, onPick }: { lane: { key: string; label: string; placed: Placed[]; twoRows: boolean }; ticks: number[]; onPick: (c: ComplianceItem) => void }) {
-  const h = lane.twoRows ? 'h-[76px]' : 'h-[46px]';
+const ROW_H = 30;
+
+function LaneRow({ lane, ticks, onPick }: { lane: { key: string; label: string; placed: Placed[]; rows: number }; ticks: number[]; onPick: (c: ComplianceItem) => void }) {
+  const height = lane.rows * ROW_H + 16;
   return (
     <>
-      <div className={cn('flex items-center border-t border-line-soft', h)}>
+      <div className="flex items-center border-t border-line-soft" style={{ height }}>
         <span className="font-mono text-[10.5px] uppercase tracking-[0.12em] text-ink-3">{lane.label}</span>
         <span className="ml-1.5 font-mono text-[10.5px] tabular text-ink-4">{lane.placed.length || ''}</span>
       </div>
-      <div className={cn('relative border-t border-line-soft', h)}>
+      <div className="relative border-t border-line-soft" style={{ height }}>
         {/* 30-day warning window */}
         <div className="absolute inset-y-0 left-0 bg-warn-soft/40" style={{ width: `${(30 / HORIZON) * 100}%` }} />
         {/* Tick hairlines */}
@@ -325,14 +363,14 @@ function LaneRow({ lane, ticks, onPick }: { lane: { key: string; label: string; 
         {lane.placed.length === 0 && <span className="absolute left-3 top-1/2 -translate-y-1/2 font-mono text-[10.5px] text-ink-4">nothing in this window</span>}
         {lane.placed.map((p) => {
           const tone = toneOf(p.c);
-          const top = lane.twoRows ? (p.row === 0 ? '28%' : '72%') : '50%';
+          const top = 8 + p.row * ROW_H + ROW_H / 2;
           return (
             <button
               key={p.c.id}
               type="button"
               onClick={() => onPick(p.c)}
-              className={cn('group absolute flex -translate-y-1/2 items-center gap-2 rounded-[8px] py-1 pr-2 pl-1 transition-colors hover:bg-surface-2', p.flip ? '-translate-x-full flex-row-reverse pl-2 pr-1' : '')}
-              style={{ left: `${p.x * 100}%`, top, transform: `translate(${p.flip ? '-100%' : '-9px'}, -50%)` }}
+              className={cn('group absolute flex items-center gap-2 rounded-[8px] py-1 transition-colors hover:bg-surface-2', p.flip ? 'flex-row-reverse pl-2 pr-1' : 'pl-1 pr-2')}
+              style={{ left: `${p.x * 100}%`, top, transform: `translate(${p.flip ? 'calc(-100% + 13px)' : '-13px'}, -50%)` }}
               aria-label={`${p.c.subjectName}: ${p.c.type}, ${p.days < 0 ? `${-p.days} days ago` : `in ${p.days} days`}`}
             >
               <span className="relative grid h-[18px] w-[18px] shrink-0 place-items-center">
