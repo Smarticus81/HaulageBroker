@@ -22,7 +22,7 @@ import { EventRow, EVENT_ICON, eventHref } from '@/components/app/event-row';
 import { ChartTooltip, Legend } from '@/components/charts/chart-tooltip';
 import { toast } from '@/components/ui/toast';
 import { useSession } from '@/lib/store';
-import { autopilotEvents, autopilotSummary, cashSeries, compliance, customerById, demoUser, driverById, invoices, loads, revenueSeries } from '@/lib/data';
+import { autopilotEvents, autopilotSummary, cashSeries, compliance, customerById, customers, demoUser, driverById, invoices, loads, missingDocs, revenueSeries } from '@/lib/data';
 
 const greeting = () => {
   const h = new Date().getHours();
@@ -162,6 +162,20 @@ export default function TodayPage() {
                   <dd className="mt-1 font-semibold tabular text-ink">{money(outstanding)}</dd>
                 </div>
               </dl>
+              <div className="mt-4 border-t border-line pt-4">
+                <Eyebrow>Slowest to pay</Eyebrow>
+                <ul className="space-y-2">
+                  {[...customers].sort((a, b) => b.avgDaysToPay - a.avgDaysToPay).slice(0, 3).map((c) => (
+                    <li key={c.id} className="flex items-center gap-2 text-[12.5px]">
+                      <span className="w-28 truncate text-ink-2">{c.name}</span>
+                      <span className="relative h-1.5 flex-1 rounded-full bg-surface-3">
+                        <span className="absolute inset-y-0 left-0 rounded-full" style={{ width: `${Math.min(100, (c.avgDaysToPay / 80) * 100)}%`, background: c.avgDaysToPay > policies.quick_pay_min_days ? 'var(--bad)' : 'var(--series-2)' }} />
+                      </span>
+                      <span className={cn('w-8 text-right font-mono tabular', c.avgDaysToPay > policies.quick_pay_min_days ? 'text-bad' : 'text-ink-3')}>{c.avgDaysToPay}d</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </CardBody>
           </Card>
         </Item>
@@ -196,6 +210,22 @@ export default function TodayPage() {
                   <StatusPill status="created" size="sm" />
                 </div>
               ))}
+              <div className="border-t border-line pt-4">
+                <Eyebrow>Delivered, waiting on paperwork</Eyebrow>
+                <ul className="divide-y divide-line-soft">
+                  {loads.filter((l) => l.deliveredAt && missingDocs(l).length > 0).map((l) => (
+                    <li key={l.id}>
+                      <Link href={`/app/loads/${l.id}`} className="flex items-center gap-3 py-2 text-[12.5px] hover:text-ink">
+                        <span className="font-mono font-medium text-ink">{l.number}</span>
+                        <span className="truncate text-ink-3">{customerById(l.customerId).name}</span>
+                        <span className="ml-auto flex gap-1">
+                          {missingDocs(l).map((d) => <span key={d} className="rounded-full bg-warn-soft px-1.5 py-0.5 font-mono text-[10px] text-warn">{d}</span>)}
+                        </span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </CardBody>
           </Card>
         </Item>
@@ -239,7 +269,7 @@ export default function TodayPage() {
             <CardBody>
               <div className="h-56">
                 <ResponsiveContainer width="100%" height="100%">
-                  <AreaChart data={weekly} margin={{ top: 8, right: 8, left: -18, bottom: 0 }}>
+                  <AreaChart data={weekly} margin={{ top: 8, right: 8, left: 0, bottom: 0 }}>
                     <defs>
                       <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1">
                         <stop offset="0%" stopColor="var(--series-1)" stopOpacity={0.25} />
@@ -251,7 +281,7 @@ export default function TodayPage() {
                       </linearGradient>
                     </defs>
                     <XAxis dataKey="w" tickLine={false} axisLine={false} interval={1} />
-                    <YAxis tickLine={false} axisLine={false} width={44} tickFormatter={(v) => `${v}k`} />
+                    <YAxis tickLine={false} axisLine={false} width={40} tickFormatter={(v) => `${v}k`} />
                     <Tooltip content={<ChartTooltip format={(v) => `$${v.toFixed(1)}k`} />} cursor={{ stroke: 'var(--line-strong)' }} />
                     <Area type="monotone" dataKey="invoiced" name="Invoiced" stroke="var(--series-1)" strokeWidth={2} fill="url(#g1)" dot={false} activeDot={{ r: 4, strokeWidth: 2, stroke: 'var(--surface)' }} />
                     <Area type="monotone" dataKey="collected" name="Collected" stroke="var(--series-2)" strokeWidth={2} fill="url(#g2)" dot={false} activeDot={{ r: 4, strokeWidth: 2, stroke: 'var(--surface)' }} />

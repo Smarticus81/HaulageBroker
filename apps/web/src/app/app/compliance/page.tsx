@@ -119,13 +119,13 @@ function Compliance() {
         </span>
       ),
     },
-    { key: 'type', header: 'Item', sortValue: (r) => r.type, render: (r) => <span className="text-ink">{r.type}</span> },
+    { key: 'type', header: 'Item', sortValue: (r) => r.type, render: (r) => <span className="whitespace-nowrap text-ink">{r.type}</span> },
     {
       key: 'expires',
       header: 'Expires',
       sortValue: (r) => r.expiresAt,
       render: (r) => (
-        <span className="inline-flex items-center gap-2">
+        <span className="inline-flex items-center gap-2 whitespace-nowrap">
           <span className="font-mono text-[12px] text-ink-2">{fmtDate(r.expiresAt, 'MMM d, yyyy')}</span>
           <DaysTag c={r} />
         </span>
@@ -192,18 +192,10 @@ function Compliance() {
               eyebrow="Horizon"
               title={`Next ${HORIZON} days`}
               description="Every item that lapses in this window, by who or what it belongs to. Expired items sit at today."
-              aside={
-                <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
-                  {(['bad', 'warn', 'good'] as const).map((t) => (
-                    <span key={t} className="inline-flex items-center gap-1.5 text-xs text-ink-3">
-                      <span className={cn('h-2 w-2 rounded-full', t === 'bad' ? 'bg-bad' : t === 'warn' ? 'bg-warn' : 'bg-good')} />
-                      {t === 'bad' ? 'Expired' : t === 'warn' ? 'Within 30 days' : 'Current'}
-                    </span>
-                  ))}
-                </div>
-              }
+              aside={<span className="hidden sm:block"><HorizonLegend /></span>}
             />
             <CardBody className="pt-1">
+              <div className="mb-3 sm:hidden"><HorizonLegend /></div>
               <Horizon items={horizonItems} onPick={(c) => setOpenId(c.id)} />
             </CardBody>
           </Card>
@@ -262,6 +254,19 @@ function Compliance() {
 
 // ─── Horizon ─────────────────────────────────────────────────────────────────
 
+function HorizonLegend() {
+  return (
+    <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
+      {(['bad', 'warn', 'good'] as const).map((t) => (
+        <span key={t} className="inline-flex items-center gap-1.5 text-xs text-ink-3">
+          <span className={cn('h-2 w-2 rounded-full', t === 'bad' ? 'bg-bad' : t === 'warn' ? 'bg-warn' : 'bg-good')} />
+          {t === 'bad' ? 'Expired' : t === 'warn' ? 'Within 30 days' : 'Current'}
+        </span>
+      ))}
+    </div>
+  );
+}
+
 type Placed = { c: ComplianceItem; x: number; row: number; flip: boolean; days: number };
 
 function Horizon({ items, onPick }: { items: ComplianceItem[]; onPick: (c: ComplianceItem) => void }) {
@@ -275,8 +280,8 @@ function Horizon({ items, onPick }: { items: ComplianceItem[]; onPick: (c: Compl
       const d = daysOut(c.expiresAt);
       const x = Math.max(0, Math.min(HORIZON, d)) / HORIZON;
       // Two rows per lane; alternate when a label would collide with its neighbour.
-      const row = x - lastX < 0.2 ? (lastRow === 0 ? 1 : 0) : 0;
-      placed.push({ c, x, row, flip: x > 0.8, days: d });
+      const row = x - lastX < 0.3 ? (lastRow === 0 ? 1 : 0) : 0;
+      placed.push({ c, x, row, flip: x > 0.72, days: d });
       lastX = x;
       lastRow = row;
     }
@@ -334,7 +339,7 @@ function LaneRow({ lane, ticks, onPick }: { lane: { key: string; label: string; 
                 {p.days < 0 && <span className="absolute inset-0 animate-pulse-ring rounded-full bg-bad/30" />}
                 <span className={cn('h-2.5 w-2.5 rounded-full ring-2 ring-surface', tone === 'bad' ? 'bg-bad' : tone === 'warn' ? 'bg-warn' : 'bg-good')} />
               </span>
-              <span className={cn('whitespace-nowrap font-mono text-[11px] leading-none', p.flip && 'text-right')}>
+              <span className={cn('hidden whitespace-nowrap font-mono text-[11px] leading-none md:inline', p.flip && 'text-right')}>
                 <span className="text-ink">{p.c.type}</span>
                 {shortSubject(p.c) && <span className="text-ink-3"> · {shortSubject(p.c)}</span>}
                 <span className={cn('ml-1.5 tabular', tone === 'bad' ? 'text-bad' : tone === 'warn' ? 'text-warn' : 'text-ink-4')}>{p.days < 0 ? `${-p.days}d ago` : `${p.days}d`}</span>

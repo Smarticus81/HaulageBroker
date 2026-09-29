@@ -225,6 +225,15 @@ export default function AutopilotPage() {
                   ))}
                 </ul>
               </div>
+
+              <div className="rounded-[14px] border border-dashed border-line px-4 py-3">
+                <Eyebrow>In every mode</Eyebrow>
+                <ul className="space-y-1.5 text-[12.5px] text-ink-3">
+                  <li className="flex items-start gap-2"><Check className="mt-[3px] h-3.5 w-3.5 shrink-0 text-good" /> Money disputes always wait for you</li>
+                  <li className="flex items-start gap-2"><Check className="mt-[3px] h-3.5 w-3.5 shrink-0 text-good" /> Nothing goes out during quiet hours ({policies.quiet_hours})</li>
+                  <li className="flex items-start gap-2"><Check className="mt-[3px] h-3.5 w-3.5 shrink-0 text-good" /> Every action leaves a receipt in the ledger below</li>
+                </ul>
+              </div>
             </CardBody>
           </Card>
         </Item>
@@ -275,6 +284,22 @@ export default function AutopilotPage() {
                   ))}
                 </div>
               </div>
+
+              <dl className="mt-5 grid grid-cols-3 gap-3 border-t border-line pt-4 text-[13px]">
+                <div>
+                  <dt className="font-mono text-[10.5px] uppercase tracking-[0.12em] text-ink-3">This week</dt>
+                  <dd className="mt-1 font-semibold tabular text-ink">{hoursLabel(summary.saved_minutes_7d)}</dd>
+                </div>
+                <div>
+                  <dt className="font-mono text-[10.5px] uppercase tracking-[0.12em] text-ink-3">Per action</dt>
+                  <dd className="mt-1 font-semibold tabular text-ink">{summary.events_7d ? Math.round(summary.saved_minutes_7d / summary.events_7d) : 0}m</dd>
+                </div>
+                <div>
+                  <dt className="font-mono text-[10.5px] uppercase tracking-[0.12em] text-ink-3">Waiting on you</dt>
+                  <dd className="mt-1 font-semibold tabular text-warn">{summary.needs_you}</dd>
+                </div>
+              </dl>
+              <p className="mt-3 text-[11.5px] leading-snug text-ink-4">Each receipt carries an estimate of the office time it replaced. The 30-day figure projects this week forward.</p>
             </CardBody>
           </Card>
         </Item>

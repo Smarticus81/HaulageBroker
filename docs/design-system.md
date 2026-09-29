@@ -27,7 +27,7 @@ boxes and arrows.
 | `line`, `line-strong`, `line-soft` | hairlines. Never use grey borders |
 | `signal` (+`-soft`, `-strong`, `-ink`) | the accent: primary buttons, active nav, ribbons, the orb |
 | `good`, `warn`, `bad`, `info`, `mind` (+`-soft`) | status only. `mind` is reserved for Copilot / AI |
-| `--series-1..6` | chart series, in that order, never cycled past 6 |
+| `--series-1..6` | chart series, in that order, never cycled past 6. Validated with the dataviz palette checker: light `#d95b2b #2a78d6 #1baf7a #7a5af5 #eda100 #e87ba4`, dark `#e5652f #3987e5 #199e70 #9085e9 #c98500 #d55181`; slots 3, 5, 6 sit under 3:1 on the light surface, so charts using them carry visible labels or a legend |
 
 Tailwind classes: `bg-surface`, `text-ink-3`, `border-line`, `bg-signal-soft`,
 `text-good`, and so on. Radii: `rounded-[10px]` controls, `rounded-[14px]`
