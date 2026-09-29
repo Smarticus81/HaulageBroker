@@ -72,84 +72,84 @@ INSERT INTO documents (id, org_id, doc_type, original_filename, storage_url, con
 -- Compliance Artifacts
 INSERT INTO compliance_artifacts (id, org_id, subject_type, subject_id, artifact_type, description, issue_date, expiry_date, status, evidence_document_id) VALUES
   -- Driver Dave: CDL expiring in ~2.5 months
-  ('g0000000-0000-0000-0000-000000000001', 'a0000000-0000-0000-0000-000000000001', 'driver', 'b0000000-0000-0000-0000-000000000006', 'CDL', 'Commercial Driver License - Class A', '2020-06-15', (CURRENT_DATE + INTERVAL '10 days')::date, 'expiring_soon', 'f0000000-0000-0000-0000-000000000011'),
+  ('10000000-0000-0000-0000-000000000001', 'a0000000-0000-0000-0000-000000000001', 'driver', 'b0000000-0000-0000-0000-000000000006', 'CDL', 'Commercial Driver License - Class A', '2020-06-15', (CURRENT_DATE + INTERVAL '10 days')::date, 'expiring_soon', 'f0000000-0000-0000-0000-000000000011'),
   -- Driver Dave: Medical card expiring soon
-  ('g0000000-0000-0000-0000-000000000002', 'a0000000-0000-0000-0000-000000000001', 'driver', 'b0000000-0000-0000-0000-000000000006', 'MedCard', 'DOT Medical Examiner Certificate', '2022-04-20', (CURRENT_DATE + INTERVAL '25 days')::date, 'expiring_soon', 'f0000000-0000-0000-0000-000000000012'),
+  ('10000000-0000-0000-0000-000000000002', 'a0000000-0000-0000-0000-000000000001', 'driver', 'b0000000-0000-0000-0000-000000000006', 'MedCard', 'DOT Medical Examiner Certificate', '2022-04-20', (CURRENT_DATE + INTERVAL '25 days')::date, 'expiring_soon', 'f0000000-0000-0000-0000-000000000012'),
   -- Carrier insurance: active
-  ('g0000000-0000-0000-0000-000000000003', 'a0000000-0000-0000-0000-000000000001', 'carrier', 'd0000000-0000-0000-0000-000000000001', 'InsuranceCert', 'General Liability Insurance', '2024-01-01', (CURRENT_DATE + INTERVAL '180 days')::date, 'active', 'f0000000-0000-0000-0000-000000000013'),
+  ('10000000-0000-0000-0000-000000000003', 'a0000000-0000-0000-0000-000000000001', 'carrier', 'd0000000-0000-0000-0000-000000000001', 'InsuranceCert', 'General Liability Insurance', '2024-01-01', (CURRENT_DATE + INTERVAL '180 days')::date, 'active', 'f0000000-0000-0000-0000-000000000013'),
   -- Truck annual inspection: expired
-  ('g0000000-0000-0000-0000-000000000004', 'a0000000-0000-0000-0000-000000000001', 'truck', 'd0000000-0000-0000-0000-000000000001', 'AnnualInspection', 'Annual DOT Inspection - Truck #101', '2023-03-15', (CURRENT_DATE - INTERVAL '5 days')::date, 'expired', NULL),
+  ('10000000-0000-0000-0000-000000000004', 'a0000000-0000-0000-0000-000000000001', 'truck', 'd0000000-0000-0000-0000-000000000001', 'AnnualInspection', 'Annual DOT Inspection - Truck #101', '2023-03-15', (CURRENT_DATE - INTERVAL '5 days')::date, 'expired', NULL),
   -- Trailer inspection: expiring in 7 days
-  ('g0000000-0000-0000-0000-000000000005', 'a0000000-0000-0000-0000-000000000001', 'trailer', 'd0000000-0000-0000-0000-000000000001', 'AnnualInspection', 'Annual DOT Inspection - Trailer #201', '2023-03-20', (CURRENT_DATE + INTERVAL '7 days')::date, 'expiring_soon', NULL);
+  ('10000000-0000-0000-0000-000000000005', 'a0000000-0000-0000-0000-000000000001', 'trailer', 'd0000000-0000-0000-0000-000000000001', 'AnnualInspection', 'Annual DOT Inspection - Trailer #201', '2023-03-20', (CURRENT_DATE + INTERVAL '7 days')::date, 'expiring_soon', NULL);
 
 -- Compliance Rules
 INSERT INTO compliance_rules (id, org_id, name, description, artifact_type, subject_type, required, lead_time_days, severity, is_active) VALUES
-  ('h0000000-0000-0000-0000-000000000001', 'a0000000-0000-0000-0000-000000000001', 'CDL Expiration', 'Commercial Driver License must be current', 'CDL', 'driver', true, '{30,14,7}', 'critical', true),
-  ('h0000000-0000-0000-0000-000000000002', 'a0000000-0000-0000-0000-000000000001', 'Medical Card Expiration', 'DOT Medical Certificate must be current', 'MedCard', 'driver', true, '{30,14,7}', 'critical', true),
-  ('h0000000-0000-0000-0000-000000000003', 'a0000000-0000-0000-0000-000000000001', 'Annual Inspection', 'Annual DOT vehicle inspection required', 'AnnualInspection', 'truck', true, '{30,14,7}', 'high', true),
-  ('h0000000-0000-0000-0000-000000000004', 'a0000000-0000-0000-0000-000000000001', 'Insurance Certificate', 'Valid insurance coverage required', 'InsuranceCert', 'carrier', true, '{60,30,14}', 'critical', true),
-  ('h0000000-0000-0000-0000-000000000005', 'a0000000-0000-0000-0000-000000000001', 'Trailer Inspection', 'Annual DOT trailer inspection required', 'AnnualInspection', 'trailer', true, '{30,14,7}', 'high', true);
+  ('11000000-0000-0000-0000-000000000001', 'a0000000-0000-0000-0000-000000000001', 'CDL Expiration', 'Commercial Driver License must be current', 'CDL', 'driver', true, '{30,14,7}', 'critical', true),
+  ('11000000-0000-0000-0000-000000000002', 'a0000000-0000-0000-0000-000000000001', 'Medical Card Expiration', 'DOT Medical Certificate must be current', 'MedCard', 'driver', true, '{30,14,7}', 'critical', true),
+  ('11000000-0000-0000-0000-000000000003', 'a0000000-0000-0000-0000-000000000001', 'Annual Inspection', 'Annual DOT vehicle inspection required', 'AnnualInspection', 'truck', true, '{30,14,7}', 'high', true),
+  ('11000000-0000-0000-0000-000000000004', 'a0000000-0000-0000-0000-000000000001', 'Insurance Certificate', 'Valid insurance coverage required', 'InsuranceCert', 'carrier', true, '{60,30,14}', 'critical', true),
+  ('11000000-0000-0000-0000-000000000005', 'a0000000-0000-0000-0000-000000000001', 'Trailer Inspection', 'Annual DOT trailer inspection required', 'AnnualInspection', 'trailer', true, '{30,14,7}', 'high', true);
 
 -- Invoice Packets
 INSERT INTO invoice_packets (id, org_id, load_record_id, required_docs, docs_present, packet_status) VALUES
-  ('i0000000-0000-0000-0000-000000000001', 'a0000000-0000-0000-0000-000000000001', 'e0000000-0000-0000-0000-000000000001', '["POD", "BOL", "RateConf"]', '["POD", "BOL", "RateConf"]', 'exported'),
-  ('i0000000-0000-0000-0000-000000000002', 'a0000000-0000-0000-0000-000000000001', 'e0000000-0000-0000-0000-000000000003', '["POD", "BOL", "RateConf"]', '["POD", "BOL", "RateConf"]', 'ready_for_review'),
-  ('i0000000-0000-0000-0000-000000000003', 'a0000000-0000-0000-0000-000000000001', 'e0000000-0000-0000-0000-000000000005', '["POD", "BOL", "RateConf"]', '[]', 'incomplete');
+  ('12000000-0000-0000-0000-000000000001', 'a0000000-0000-0000-0000-000000000001', 'e0000000-0000-0000-0000-000000000001', '["POD", "BOL", "RateConf"]', '["POD", "BOL", "RateConf"]', 'exported'),
+  ('12000000-0000-0000-0000-000000000002', 'a0000000-0000-0000-0000-000000000001', 'e0000000-0000-0000-0000-000000000003', '["POD", "BOL", "RateConf"]', '["POD", "BOL", "RateConf"]', 'ready_for_review'),
+  ('12000000-0000-0000-0000-000000000003', 'a0000000-0000-0000-0000-000000000001', 'e0000000-0000-0000-0000-000000000005', '["POD", "BOL", "RateConf"]', '[]', 'incomplete');
 
 -- Tasks
 INSERT INTO tasks (id, org_id, queue, title, description, priority, due_date, assignee_id, linked_entity_type, linked_entity_id, status) VALUES
-  ('j0000000-0000-0000-0000-000000000001', 'a0000000-0000-0000-0000-000000000001', 'docs', 'Collect POD for LD-2024-005', 'POD missing for load LD-2024-005. Delivery was 2024-01-26.', 'high', (CURRENT_DATE + INTERVAL '1 day')::timestamptz, 'b0000000-0000-0000-0000-000000000005', 'load_record', 'e0000000-0000-0000-0000-000000000005', 'open'),
-  ('j0000000-0000-0000-0000-000000000002', 'a0000000-0000-0000-0000-000000000001', 'billing', 'Missing Rate Confirmation for LD-2024-002', 'Rate confirmation not uploaded for load LD-2024-002.', 'medium', (CURRENT_DATE + INTERVAL '3 days')::timestamptz, 'b0000000-0000-0000-0000-000000000002', 'load_record', 'e0000000-0000-0000-0000-000000000002', 'open'),
-  ('j0000000-0000-0000-0000-000000000003', 'a0000000-0000-0000-0000-000000000001', 'compliance', 'CDL expiring for Dave Driver', 'CDL expires in 10 days. Ensure renewal is in progress.', 'urgent', (CURRENT_DATE + INTERVAL '5 days')::timestamptz, 'b0000000-0000-0000-0000-000000000003', 'user', 'b0000000-0000-0000-0000-000000000006', 'open'),
-  ('j0000000-0000-0000-0000-000000000004', 'a0000000-0000-0000-0000-000000000001', 'compliance', 'Truck #101 Annual Inspection Expired', 'Annual DOT inspection has expired. Vehicle must not operate until inspected.', 'urgent', CURRENT_DATE::timestamptz, 'b0000000-0000-0000-0000-000000000004', 'carrier_profile', 'd0000000-0000-0000-0000-000000000001', 'open'),
-  ('j0000000-0000-0000-0000-000000000005', 'a0000000-0000-0000-0000-000000000001', 'billing', 'Review invoice packet for LD-2024-003', 'All docs present. Ready for approval.', 'medium', (CURRENT_DATE + INTERVAL '2 days')::timestamptz, 'b0000000-0000-0000-0000-000000000002', 'load_record', 'e0000000-0000-0000-0000-000000000003', 'open'),
-  ('j0000000-0000-0000-0000-000000000006', 'a0000000-0000-0000-0000-000000000001', 'docs', 'Re-upload POD for LD-2024-006', 'POD failed validation: missing signature, date mismatch.', 'high', (CURRENT_DATE + INTERVAL '1 day')::timestamptz, 'b0000000-0000-0000-0000-000000000005', 'load_record', 'e0000000-0000-0000-0000-000000000006', 'in_progress'),
-  ('j0000000-0000-0000-0000-000000000007', 'a0000000-0000-0000-0000-000000000001', 'docs', 'Collect all docs for LD-2024-009', 'No documents uploaded for load LD-2024-009.', 'medium', (CURRENT_DATE + INTERVAL '5 days')::timestamptz, NULL, 'load_record', 'e0000000-0000-0000-0000-000000000009', 'open'),
-  ('j0000000-0000-0000-0000-000000000008', 'a0000000-0000-0000-0000-000000000001', 'compliance', 'Trailer #201 inspection expiring in 7 days', 'Schedule annual inspection for Trailer #201.', 'high', (CURRENT_DATE + INTERVAL '5 days')::timestamptz, 'b0000000-0000-0000-0000-000000000004', 'carrier_profile', 'd0000000-0000-0000-0000-000000000001', 'open');
+  ('13000000-0000-0000-0000-000000000001', 'a0000000-0000-0000-0000-000000000001', 'docs', 'Collect POD for LD-2024-005', 'POD missing for load LD-2024-005. Delivery was 2024-01-26.', 'high', (CURRENT_DATE + INTERVAL '1 day')::timestamptz, 'b0000000-0000-0000-0000-000000000005', 'load_record', 'e0000000-0000-0000-0000-000000000005', 'open'),
+  ('13000000-0000-0000-0000-000000000002', 'a0000000-0000-0000-0000-000000000001', 'billing', 'Missing Rate Confirmation for LD-2024-002', 'Rate confirmation not uploaded for load LD-2024-002.', 'medium', (CURRENT_DATE + INTERVAL '3 days')::timestamptz, 'b0000000-0000-0000-0000-000000000002', 'load_record', 'e0000000-0000-0000-0000-000000000002', 'open'),
+  ('13000000-0000-0000-0000-000000000003', 'a0000000-0000-0000-0000-000000000001', 'compliance', 'CDL expiring for Dave Driver', 'CDL expires in 10 days. Ensure renewal is in progress.', 'urgent', (CURRENT_DATE + INTERVAL '5 days')::timestamptz, 'b0000000-0000-0000-0000-000000000003', 'user', 'b0000000-0000-0000-0000-000000000006', 'open'),
+  ('13000000-0000-0000-0000-000000000004', 'a0000000-0000-0000-0000-000000000001', 'compliance', 'Truck #101 Annual Inspection Expired', 'Annual DOT inspection has expired. Vehicle must not operate until inspected.', 'urgent', CURRENT_DATE::timestamptz, 'b0000000-0000-0000-0000-000000000004', 'carrier_profile', 'd0000000-0000-0000-0000-000000000001', 'open'),
+  ('13000000-0000-0000-0000-000000000005', 'a0000000-0000-0000-0000-000000000001', 'billing', 'Review invoice packet for LD-2024-003', 'All docs present. Ready for approval.', 'medium', (CURRENT_DATE + INTERVAL '2 days')::timestamptz, 'b0000000-0000-0000-0000-000000000002', 'load_record', 'e0000000-0000-0000-0000-000000000003', 'open'),
+  ('13000000-0000-0000-0000-000000000006', 'a0000000-0000-0000-0000-000000000001', 'docs', 'Re-upload POD for LD-2024-006', 'POD failed validation: missing signature, date mismatch.', 'high', (CURRENT_DATE + INTERVAL '1 day')::timestamptz, 'b0000000-0000-0000-0000-000000000005', 'load_record', 'e0000000-0000-0000-0000-000000000006', 'in_progress'),
+  ('13000000-0000-0000-0000-000000000007', 'a0000000-0000-0000-0000-000000000001', 'docs', 'Collect all docs for LD-2024-009', 'No documents uploaded for load LD-2024-009.', 'medium', (CURRENT_DATE + INTERVAL '5 days')::timestamptz, NULL, 'load_record', 'e0000000-0000-0000-0000-000000000009', 'open'),
+  ('13000000-0000-0000-0000-000000000008', 'a0000000-0000-0000-0000-000000000001', 'compliance', 'Trailer #201 inspection expiring in 7 days', 'Schedule annual inspection for Trailer #201.', 'high', (CURRENT_DATE + INTERVAL '5 days')::timestamptz, 'b0000000-0000-0000-0000-000000000004', 'carrier_profile', 'd0000000-0000-0000-0000-000000000001', 'open');
 
 -- Exceptions
 INSERT INTO exceptions (id, org_id, type, severity, linked_entity_type, linked_entity_id, description, status) VALUES
-  ('k0000000-0000-0000-0000-000000000001', 'a0000000-0000-0000-0000-000000000001', 'missing_pod', 'high', 'load_record', 'e0000000-0000-0000-0000-000000000005', 'POD not received for LD-2024-005. Delivery date was 2024-01-26.', 'open'),
-  ('k0000000-0000-0000-0000-000000000002', 'a0000000-0000-0000-0000-000000000001', 'missing_rateconf', 'medium', 'load_record', 'e0000000-0000-0000-0000-000000000002', 'Rate confirmation missing for LD-2024-002.', 'open'),
-  ('k0000000-0000-0000-0000-000000000003', 'a0000000-0000-0000-0000-000000000001', 'invalid_pod', 'high', 'load_record', 'e0000000-0000-0000-0000-000000000006', 'POD for LD-2024-006 failed validation: no signature, delivery date mismatch.', 'investigating'),
-  ('k0000000-0000-0000-0000-000000000004', 'a0000000-0000-0000-0000-000000000001', 'compliance_expired', 'critical', 'carrier_profile', 'd0000000-0000-0000-0000-000000000001', 'Annual inspection for Truck #101 has expired.', 'open'),
-  ('k0000000-0000-0000-0000-000000000005', 'a0000000-0000-0000-0000-000000000001', 'missing_pod', 'medium', 'load_record', 'e0000000-0000-0000-0000-000000000009', 'No documents uploaded for LD-2024-009.', 'open'),
-  ('k0000000-0000-0000-0000-000000000006', 'a0000000-0000-0000-0000-000000000001', 'missing_pod', 'medium', 'load_record', 'e0000000-0000-0000-0000-000000000013', 'POD missing for LD-2024-013.', 'open'),
-  ('k0000000-0000-0000-0000-000000000007', 'a0000000-0000-0000-0000-000000000001', 'missing_pod', 'low', 'load_record', 'e0000000-0000-0000-0000-000000000018', 'All docs pending for LD-2024-018.', 'open');
+  ('14000000-0000-0000-0000-000000000001', 'a0000000-0000-0000-0000-000000000001', 'missing_pod', 'high', 'load_record', 'e0000000-0000-0000-0000-000000000005', 'POD not received for LD-2024-005. Delivery date was 2024-01-26.', 'open'),
+  ('14000000-0000-0000-0000-000000000002', 'a0000000-0000-0000-0000-000000000001', 'missing_rateconf', 'medium', 'load_record', 'e0000000-0000-0000-0000-000000000002', 'Rate confirmation missing for LD-2024-002.', 'open'),
+  ('14000000-0000-0000-0000-000000000003', 'a0000000-0000-0000-0000-000000000001', 'invalid_pod', 'high', 'load_record', 'e0000000-0000-0000-0000-000000000006', 'POD for LD-2024-006 failed validation: no signature, delivery date mismatch.', 'investigating'),
+  ('14000000-0000-0000-0000-000000000004', 'a0000000-0000-0000-0000-000000000001', 'compliance_expired', 'critical', 'carrier_profile', 'd0000000-0000-0000-0000-000000000001', 'Annual inspection for Truck #101 has expired.', 'open'),
+  ('14000000-0000-0000-0000-000000000005', 'a0000000-0000-0000-0000-000000000001', 'missing_pod', 'medium', 'load_record', 'e0000000-0000-0000-0000-000000000009', 'No documents uploaded for LD-2024-009.', 'open'),
+  ('14000000-0000-0000-0000-000000000006', 'a0000000-0000-0000-0000-000000000001', 'missing_pod', 'medium', 'load_record', 'e0000000-0000-0000-0000-000000000013', 'POD missing for LD-2024-013.', 'open'),
+  ('14000000-0000-0000-0000-000000000007', 'a0000000-0000-0000-0000-000000000001', 'missing_pod', 'low', 'load_record', 'e0000000-0000-0000-0000-000000000018', 'All docs pending for LD-2024-018.', 'open');
 
 -- Default Automation Rules
 INSERT INTO automation_rules (id, org_id, name, description, trigger_type, trigger_event, schedule_cron, conditions, actions, is_active, is_system) VALUES
-  ('r0000000-0000-0000-0000-000000000001', 'a0000000-0000-0000-0000-000000000001',
+  ('16000000-0000-0000-0000-000000000001', 'a0000000-0000-0000-0000-000000000001',
    'POD Chase', 'If delivery passed and POD not uploaded within 12 hours, create document request and task',
    'event', 'load.status_changed', NULL,
    '[{"type": "doc_missing_after", "params": {"doc_type": "POD", "hours": 12}}]',
    '[{"type": "create_document_request", "params": {"doc_types": ["POD"], "target": "driver"}}, {"type": "create_task", "params": {"queue": "docs", "title": "Collect POD", "priority": "high"}}]',
    true, true),
-  ('r0000000-0000-0000-0000-000000000002', 'a0000000-0000-0000-0000-000000000001',
+  ('16000000-0000-0000-0000-000000000002', 'a0000000-0000-0000-0000-000000000001',
    'Rate Confirmation Required', 'If load created and RateConf missing for 2 hours, create billing task',
    'event', 'load.created', NULL,
    '[{"type": "doc_missing_after", "params": {"doc_type": "RateConf", "hours": 2}}]',
    '[{"type": "create_task", "params": {"queue": "billing", "title": "Missing Rate Confirmation", "priority": "medium"}}]',
    true, true),
-  ('r0000000-0000-0000-0000-000000000003', 'a0000000-0000-0000-0000-000000000001',
+  ('16000000-0000-0000-0000-000000000003', 'a0000000-0000-0000-0000-000000000001',
    'Validation Mismatch', 'If extracted amount differs from load amount by >2%, raise exception',
    'event', 'document.validated', NULL,
    '[{"type": "amount_mismatch", "params": {"threshold_pct": 0.02}}]',
    '[{"type": "create_exception", "params": {"type": "mismatch_amount", "severity": "high"}}, {"type": "create_task", "params": {"queue": "billing", "title": "Amount Mismatch Review", "priority": "high"}}]',
    true, true),
-  ('r0000000-0000-0000-0000-000000000004', 'a0000000-0000-0000-0000-000000000001',
+  ('16000000-0000-0000-0000-000000000004', 'a0000000-0000-0000-0000-000000000001',
    'Compliance Expirations', 'Daily scan for compliance artifacts expiring in 30/14/7 days',
    'schedule', NULL, '0 6 * * *',
    '[{"type": "compliance_expiry_within", "params": {"days": 30}}]',
    '[{"type": "create_task", "params": {"queue": "compliance", "title": "Compliance Expiring", "priority": "high"}}, {"type": "send_notification", "params": {"channel": "email", "template": "compliance_expiring"}}]',
    true, true),
-  ('r0000000-0000-0000-0000-000000000005', 'a0000000-0000-0000-0000-000000000001',
+  ('16000000-0000-0000-0000-000000000005', 'a0000000-0000-0000-0000-000000000001',
    'Invoice Packet Readiness', 'When all required docs present and validations pass, mark packet ready',
    'event', 'document.validated', NULL,
    '[{"type": "all_required_docs_present", "params": {"doc_types": ["POD", "BOL", "RateConf"]}}]',
    '[{"type": "update_packet_status", "params": {"status": "ready_for_review"}}, {"type": "create_task", "params": {"queue": "billing", "title": "Invoice Packet Ready for Approval", "priority": "medium"}}]',
    true, true),
-  ('r0000000-0000-0000-0000-000000000006', 'a0000000-0000-0000-0000-000000000001',
+  ('16000000-0000-0000-0000-000000000006', 'a0000000-0000-0000-0000-000000000001',
    'Weekly Settlement Packet', 'Generate settlement packets weekly with missing docs list',
    'schedule', NULL, '0 8 * * 1',
    '[]',
@@ -158,14 +158,14 @@ INSERT INTO automation_rules (id, org_id, name, description, trigger_type, trigg
 
 -- Document Requests
 INSERT INTO document_requests (id, org_id, requested_by, target_user_id, due_date, required_doc_types, linked_entity_type, linked_entity_id, status, reminders_sent) VALUES
-  ('l0000000-0000-0000-0000-000000000001', 'a0000000-0000-0000-0000-000000000001', 'b0000000-0000-0000-0000-000000000005', 'b0000000-0000-0000-0000-000000000006', (CURRENT_DATE + INTERVAL '2 days')::timestamptz, '{POD}', 'load_record', 'e0000000-0000-0000-0000-000000000005', 'pending', 1),
-  ('l0000000-0000-0000-0000-000000000002', 'a0000000-0000-0000-0000-000000000001', 'b0000000-0000-0000-0000-000000000005', 'b0000000-0000-0000-0000-000000000006', (CURRENT_DATE + INTERVAL '3 days')::timestamptz, '{POD,BOL}', 'load_record', 'e0000000-0000-0000-0000-000000000009', 'pending', 0),
-  ('l0000000-0000-0000-0000-000000000003', 'a0000000-0000-0000-0000-000000000001', 'b0000000-0000-0000-0000-000000000003', 'b0000000-0000-0000-0000-000000000006', (CURRENT_DATE - INTERVAL '1 day')::timestamptz, '{CDL}', 'user', 'b0000000-0000-0000-0000-000000000006', 'overdue', 2);
+  ('15000000-0000-0000-0000-000000000001', 'a0000000-0000-0000-0000-000000000001', 'b0000000-0000-0000-0000-000000000005', 'b0000000-0000-0000-0000-000000000006', (CURRENT_DATE + INTERVAL '2 days')::timestamptz, '{POD}', 'load_record', 'e0000000-0000-0000-0000-000000000005', 'pending', 1),
+  ('15000000-0000-0000-0000-000000000002', 'a0000000-0000-0000-0000-000000000001', 'b0000000-0000-0000-0000-000000000005', 'b0000000-0000-0000-0000-000000000006', (CURRENT_DATE + INTERVAL '3 days')::timestamptz, '{POD,BOL}', 'load_record', 'e0000000-0000-0000-0000-000000000009', 'pending', 0),
+  ('15000000-0000-0000-0000-000000000003', 'a0000000-0000-0000-0000-000000000001', 'b0000000-0000-0000-0000-000000000003', 'b0000000-0000-0000-0000-000000000006', (CURRENT_DATE - INTERVAL '1 day')::timestamptz, '{CDL}', 'user', 'b0000000-0000-0000-0000-000000000006', 'overdue', 2);
 
 -- Audit Log entries
 INSERT INTO audit_logs (org_id, actor_id, actor_type, action, entity_type, entity_id, metadata, source) VALUES
   ('a0000000-0000-0000-0000-000000000001', 'b0000000-0000-0000-0000-000000000001', 'user', 'organization.created', 'organization', 'a0000000-0000-0000-0000-000000000001', '{}', 'system'),
   ('a0000000-0000-0000-0000-000000000001', 'b0000000-0000-0000-0000-000000000005', 'user', 'document.uploaded', 'document', 'f0000000-0000-0000-0000-000000000001', '{"doc_type": "POD", "load": "LD-2024-001"}', 'ui'),
-  ('a0000000-0000-0000-0000-000000000001', NULL, 'automation', 'task.created', 'task', 'j0000000-0000-0000-0000-000000000001', '{"rule": "POD Chase", "trigger": "load.status_changed"}', 'automation'),
-  ('a0000000-0000-0000-0000-000000000001', NULL, 'automation', 'exception.created', 'exception', 'k0000000-0000-0000-0000-000000000001', '{"rule": "POD Chase", "type": "missing_pod"}', 'automation'),
-  ('a0000000-0000-0000-0000-000000000001', 'b0000000-0000-0000-0000-000000000002', 'user', 'invoice_packet.approved', 'invoice_packet', 'i0000000-0000-0000-0000-000000000001', '{"load": "LD-2024-001"}', 'ui');
+  ('a0000000-0000-0000-0000-000000000001', NULL, 'automation', 'task.created', 'task', '13000000-0000-0000-0000-000000000001', '{"rule": "POD Chase", "trigger": "load.status_changed"}', 'automation'),
+  ('a0000000-0000-0000-0000-000000000001', NULL, 'automation', 'exception.created', 'exception', '14000000-0000-0000-0000-000000000001', '{"rule": "POD Chase", "type": "missing_pod"}', 'automation'),
+  ('a0000000-0000-0000-0000-000000000001', 'b0000000-0000-0000-0000-000000000002', 'user', 'invoice_packet.approved', 'invoice_packet', '12000000-0000-0000-0000-000000000001', '{"load": "LD-2024-001"}', 'ui');

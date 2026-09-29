@@ -37,3 +37,24 @@
 | MinIO | 9000/9001 | Object storage |
 | Temporal | 7233 | Workflow engine |
 | Temporal UI | 8080 | Temporal dashboard |
+
+## Database Migrations
+`pnpm db:migrate` (or `for f in sql/migrations/*.sql; do psql $DATABASE_URL -f "$f"; done`) applies the files in `sql/migrations/` in order. Each file is one transaction.
+
+| File | Contents |
+|------|----------|
+| 001_extensions.sql | pgcrypto, uuid, vector extensions |
+| 002_core_tables.sql | organizations, users, customers, carrier profiles |
+| 003_load_records.sql | load records |
+| 004_documents.sql | documents, document requests |
+| 005_compliance.sql | compliance artifacts and rules |
+| 006_billing.sql | invoice packets, invoice drafts, settlement packets |
+| 007_tasks_exceptions.sql | tasks, exceptions |
+| 008_automations.sql | automation rules and runs |
+| 009_audit_log.sql | append-only audit log |
+| 010_copilot.sql | copilot conversations and messages |
+| 011_seed_data.sql | demo org (Acme Trucking LLC), users, loads, documents |
+| 012_lean_model.sql | plans/subscriptions, onboarding profiles, business plans, autopilot policies and events, plus demo seed (Fleet plan, worked-example profile and plan, a week of Autopilot receipts) |
+
+## Python Unit Tests
+`python3 -m pytest services -q` runs the service unit tests without a database. The root `conftest.py` maps the hyphenated service directories to importable packages (`business_plan_svc`, `automations_svc`, ...).

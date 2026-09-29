@@ -1,4 +1,4 @@
-"""SQLAlchemy ORM models for all CarrierBackOffice entities."""
+"""SQLAlchemy ORM models for all Haulage entities."""
 
 from __future__ import annotations
 
@@ -205,6 +205,14 @@ class CopilotMessageRole(str, enum.Enum):
     tool = "tool"
 
 
+class PlanTier(str, enum.Enum):
+    """Commercial plans (docs/business-model.md section 2)."""
+
+    solo = "solo"
+    fleet = "fleet"
+    autopilot = "autopilot"
+
+
 # ---------------------------------------------------------------------------
 # ORM Models
 # ---------------------------------------------------------------------------
@@ -358,7 +366,8 @@ class ComplianceArtifact(Base):
     expiry_date: Mapped[date | None] = mapped_column(Date)
     status: Mapped[ComplianceArtifactStatus] = mapped_column(Enum(ComplianceArtifactStatus, name="compliance_artifact_status", create_type=False), server_default=text("'active'"))
     evidence_document_id: Mapped[UUID | None] = mapped_column(PG_UUID(as_uuid=True), ForeignKey("documents.id", ondelete="SET NULL"))
-    metadata: Mapped[dict] = mapped_column(JSONB, server_default=text("'{}'::jsonb"))
+    # "metadata" is reserved by SQLAlchemy Declarative; the column keeps its SQL name.
+    metadata_: Mapped[dict] = mapped_column("metadata", JSONB, server_default=text("'{}'::jsonb"))
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=text("now()"))
     updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=text("now()"))
 
@@ -529,7 +538,8 @@ class AuditLog(Base):
     entity_id: Mapped[UUID | None] = mapped_column(PG_UUID(as_uuid=True))
     before_state: Mapped[dict | None] = mapped_column(JSONB)
     after_state: Mapped[dict | None] = mapped_column(JSONB)
-    metadata: Mapped[dict] = mapped_column(JSONB, server_default=text("'{}'::jsonb"))
+    # "metadata" is reserved by SQLAlchemy Declarative; the column keeps its SQL name.
+    metadata_: Mapped[dict] = mapped_column("metadata", JSONB, server_default=text("'{}'::jsonb"))
     ip_address: Mapped[str | None] = mapped_column(INET)
     source: Mapped[str | None] = mapped_column(Text)
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=text("now()"))
@@ -560,3 +570,115 @@ class CopilotMessage(Base):
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=text("now()"))
 
     conversation: Mapped[CopilotConversation] = relationship(back_populates="messages")
+
+
+# ---------------------------------------------------------------------------
+# Lean business model (migration 012): plans, onboarding, business plan, autopilot
+# ---------------------------------------------------------------------------
+
+class Subscription(Base):
+    __tablename__ = "subscriptions"
+
+    id: Mapped[UUID] = mapped_column(PG_UUID(as_uuid=True), primary_key=True, server_default=text("gen_random_uuid()"))
+    org_id: Mapped[UUID] = mapped_column(PG_UUID(as_uuid=True), ForeignKey("organizations.id", ondelete="CASCADE"), unique=True, nullable=False)
+    plan: Mapped[PlanTier] = mapped_column(Enum(PlanTier, name="plan_tier", create_type=False), nullable=False, server_default=text("'solo'"))
+    truck_count: Mapped[int] = mapped_column(Integer, nullable=False, server_default=text("1"))
+    status: Mapped[str] = mapped_column(Text, nullable=False, server_default=text("'active'"))
+    trial_ends_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    current_period_end: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=text("now()"))
+    updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=text("now()"))
+
+
+class OnboardingProfile(Base):
+    """Voice-guided onboarding answers (spec section 3). NULL trailers/drivers mean "same as trucks"."""
+
+    __tablename__ = "onboarding_profiles"
+
+    id: Mapped[UUID] = mapped_column(PG_UUID(as_uuid=True), primary_key=True, server_default=text("gen_random_uuid()"))
+    org_id: Mapped[UUID] = mapped_column(PG_UUID(as_uuid=True), ForeignKey("organizations.id", ondelete="CASCADE"), unique=True, nullable=False)
+    company_name: Mapped[str | None] = mapped_column(Text)
+    dot_number: Mapped[str | None] = mapped_column(Text)
+    mc_number: Mapped[str | None] = mapped_column(Text)
+    stage: Mapped[str] = mapped_column(Text, nullable=False, server_default=text("'operating'"))
+    trucks: Mapped[int] = mapped_column(Integer, nullable=False, server_default=text("1"))
+    trailers: Mapped[int | None] = mapped_column(Integer)
+    drivers: Mapped[int | None] = mapped_column(Integer)
+    miles_per_truck_per_week: Mapped[int] = mapped_column(Integer, nullable=False, server_default=text("2500"))
+    deadhead_pct: Mapped[Decimal] = mapped_column(Numeric(5, 4), nullable=False, server_default=text("0.15"))
+    rate_per_loaded_mile: Mapped[Decimal] = mapped_column(Numeric(10, 4), nullable=False, server_default=text("2.35"))
+    fuel_mpg: Mapped[Decimal] = mapped_column(Numeric(10, 4), nullable=False, server_default=text("6.5"))
+    fuel_price: Mapped[Decimal] = mapped_column(Numeric(10, 4), nullable=False, server_default=text("3.85"))
+    driver_pay_per_mile: Mapped[Decimal] = mapped_column(Numeric(10, 4), nullable=False, server_default=text("0.62"))
+    insurance_per_truck_month: Mapped[Decimal] = mapped_column(Numeric(12, 2), nullable=False, server_default=text("1400"))
+    truck_payment_per_month: Mapped[Decimal] = mapped_column(Numeric(12, 2), nullable=False, server_default=text("2200"))
+    trailer_payment_per_month: Mapped[Decimal] = mapped_column(Numeric(12, 2), nullable=False, server_default=text("600"))
+    maintenance_per_mile: Mapped[Decimal] = mapped_column(Numeric(10, 4), nullable=False, server_default=text("0.18"))
+    tires_per_mile: Mapped[Decimal] = mapped_column(Numeric(10, 4), nullable=False, server_default=text("0.04"))
+    tolls_permits_per_truck_month: Mapped[Decimal] = mapped_column(Numeric(12, 2), nullable=False, server_default=text("350"))
+    overhead_per_month: Mapped[Decimal] = mapped_column(Numeric(12, 2), nullable=False, server_default=text("800"))
+    payment_terms_days: Mapped[int] = mapped_column(Integer, nullable=False, server_default=text("35"))
+    factoring_enabled: Mapped[bool] = mapped_column(Boolean, nullable=False, server_default=text("false"))
+    factoring_rate_pct: Mapped[Decimal] = mapped_column(Numeric(5, 2), nullable=False, server_default=text("3.0"))
+    factoring_advance_pct: Mapped[Decimal] = mapped_column(Numeric(5, 2), nullable=False, server_default=text("95"))
+    starting_cash: Mapped[Decimal] = mapped_column(Numeric(12, 2), nullable=False, server_default=text("15000"))
+    doc_channels: Mapped[list[str]] = mapped_column(ARRAY(Text), nullable=False, server_default=text("'{email,photo}'::text[]"))
+    voice_used: Mapped[bool] = mapped_column(Boolean, nullable=False, server_default=text("false"))
+    completed_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    answers: Mapped[dict] = mapped_column(JSONB, nullable=False, server_default=text("'{}'::jsonb"))
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=text("now()"))
+    updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=text("now()"))
+
+
+class BusinessPlan(Base):
+    """A computed business plan snapshot; the newest version is the living plan."""
+
+    __tablename__ = "business_plans"
+
+    id: Mapped[UUID] = mapped_column(PG_UUID(as_uuid=True), primary_key=True, server_default=text("gen_random_uuid()"))
+    org_id: Mapped[UUID] = mapped_column(PG_UUID(as_uuid=True), ForeignKey("organizations.id", ondelete="CASCADE"), nullable=False)
+    version: Mapped[int] = mapped_column(Integer, nullable=False, server_default=text("1"))
+    inputs: Mapped[dict] = mapped_column(JSONB, nullable=False, server_default=text("'{}'::jsonb"))
+    results: Mapped[dict] = mapped_column(JSONB, nullable=False, server_default=text("'{}'::jsonb"))
+    projection: Mapped[list] = mapped_column(JSONB, nullable=False, server_default=text("'[]'::jsonb"))
+    recommendations: Mapped[list] = mapped_column(JSONB, nullable=False, server_default=text("'[]'::jsonb"))
+    health: Mapped[int] = mapped_column(Integer, nullable=False, server_default=text("0"))
+    generated_by: Mapped[str] = mapped_column(Text, nullable=False, server_default=text("'onboarding'"))
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=text("now()"))
+
+
+class AutopilotPolicy(Base):
+    """Bounded permissions the owner grants Autopilot (spec section 5). One row per org."""
+
+    __tablename__ = "autopilot_policies"
+
+    id: Mapped[UUID] = mapped_column(PG_UUID(as_uuid=True), primary_key=True, server_default=text("gen_random_uuid()"))
+    org_id: Mapped[UUID] = mapped_column(PG_UUID(as_uuid=True), ForeignKey("organizations.id", ondelete="CASCADE"), unique=True, nullable=False)
+    auto_invoice_max_amount: Mapped[Decimal] = mapped_column(Numeric(12, 2), nullable=False, server_default=text("5000"))
+    pod_chase_hours: Mapped[int] = mapped_column(Integer, nullable=False, server_default=text("12"))
+    pod_chase_cadence_hours: Mapped[int] = mapped_column(Integer, nullable=False, server_default=text("24"))
+    quick_pay_min_days: Mapped[int] = mapped_column(Integer, nullable=False, server_default=text("45"))
+    compliance_alert_days: Mapped[list[int]] = mapped_column(ARRAY(Integer), nullable=False, server_default=text("'{30,14,7,1}'::int[]"))
+    auto_link_confidence: Mapped[Decimal] = mapped_column(Numeric(5, 4), nullable=False, server_default=text("0.92"))
+    settlement_day: Mapped[str] = mapped_column(Text, nullable=False, server_default=text("'friday'"))
+    quiet_hours: Mapped[str] = mapped_column(Text, nullable=False, server_default=text("'21:00-06:00'"))
+    mode: Mapped[str] = mapped_column(Text, nullable=False, server_default=text("'suggest'"))
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=text("now()"))
+    updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=text("now()"))
+
+
+class AutopilotEvent(Base):
+    """The receipt Autopilot emits for every action it takes (or hands back)."""
+
+    __tablename__ = "autopilot_events"
+
+    id: Mapped[UUID] = mapped_column(PG_UUID(as_uuid=True), primary_key=True, server_default=text("gen_random_uuid()"))
+    org_id: Mapped[UUID] = mapped_column(PG_UUID(as_uuid=True), ForeignKey("organizations.id", ondelete="CASCADE"), nullable=False)
+    kind: Mapped[str] = mapped_column(Text, nullable=False)
+    summary: Mapped[str] = mapped_column(Text, nullable=False)
+    entity_type: Mapped[str | None] = mapped_column(Text)
+    entity_id: Mapped[UUID | None] = mapped_column(PG_UUID(as_uuid=True))
+    outcome: Mapped[str] = mapped_column(Text, nullable=False, server_default=text("'done'"))
+    saved_minutes: Mapped[int] = mapped_column(Integer, nullable=False, server_default=text("0"))
+    payload: Mapped[dict] = mapped_column(JSONB, nullable=False, server_default=text("'{}'::jsonb"))
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=text("now()"))

@@ -5,7 +5,14 @@ Determines document type from filename and OCR text content.
 
 from __future__ import annotations
 
-import re
+from dataclasses import dataclass
+
+# Scoring weights: a filename hit is a strong signal on its own; text hits
+# saturate after two matching phrases so short OCR snippets still classify.
+FILENAME_WEIGHT = 0.7
+TEXT_WEIGHT = 0.3
+TEXT_HITS_FOR_FULL_SCORE = 2
+MIN_CONFIDENCE = 0.1
 
 # Keyword/pattern rules: (doc_type, filename_patterns, text_patterns)
 _RULES: list[tuple[str, list[str], list[str]]] = [
@@ -43,7 +50,7 @@ def classify(filename: str, ocr_text: str) -> tuple[str, float]:
         # Filename match (high signal)
         for pattern in filename_patterns:
             if pattern in filename_lower:
-                score += 0.5
+                score += FILENAME_WEIGHT
                 break
 
         # Text content match
@@ -51,16 +58,29 @@ def classify(filename: str, ocr_text: str) -> tuple[str, float]:
         for pattern in text_patterns:
             if pattern in text_lower:
                 text_hits += 1
-        if text_patterns:
-            text_ratio = text_hits / len(text_patterns)
-            score += text_ratio * 0.5
+        if text_hits:
+            score += TEXT_WEIGHT * min(1.0, text_hits / TEXT_HITS_FOR_FULL_SCORE)
 
         if score > best_score:
             best_score = score
             best_type = doc_type
 
     # Minimum threshold
-    if best_score < 0.15:
+    if best_score < MIN_CONFIDENCE:
         return "Other", best_score
 
     return best_type, min(best_score, 1.0)
+
+
+@dataclass
+class ClassificationResult:
+    doc_type: str
+    confidence: float
+
+
+class DocumentClassifier:
+    """Object wrapper around :func:`classify` returning :class:`ClassificationResult`."""
+
+    def classify(self, filename: str, ocr_text: str) -> ClassificationResult:
+        doc_type, confidence = classify(filename or "", ocr_text or "")
+        return ClassificationResult(doc_type=doc_type, confidence=confidence)

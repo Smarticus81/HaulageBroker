@@ -1,6 +1,6 @@
 {
-  "buildCommand": "pnpm turbo build --filter=@carrier/backoffice",
+  "buildCommand": "pnpm turbo build --filter=@haulage/web",
   "installCommand": "pnpm install",
   "framework": "nextjs",
-  "outputDirectory": "apps/backoffice/.next"
+  "outputDirectory": "apps/web/.next"
 }

@@ -1,1 +1,1 @@
-"""Shared utilities for CarrierBackOffice platform."""
+"""Shared utilities for the Haulage platform."""

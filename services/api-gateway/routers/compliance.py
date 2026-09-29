@@ -6,7 +6,7 @@ from datetime import date, datetime, timedelta
 from uuid import UUID
 
 from fastapi import APIRouter, Depends, HTTPException, Query, status
-from pydantic import BaseModel
+from pydantic import AliasChoices, BaseModel, Field
 from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -53,7 +53,7 @@ class ComplianceArtifactResponse(BaseModel):
     expiry_date: date | None = None
     status: str
     evidence_document_id: UUID | None = None
-    metadata: dict = {}
+    metadata: dict = Field(default_factory=dict, validation_alias=AliasChoices("metadata_", "metadata"))
     created_at: datetime
     updated_at: datetime
 
@@ -170,7 +170,7 @@ async def create_compliance_artifact(
         issue_date=body.issue_date,
         expiry_date=body.expiry_date,
         evidence_document_id=body.evidence_document_id,
-        metadata=body.metadata,
+        metadata_=body.metadata,
     )
     db.add(artifact)
     await db.commit()
@@ -211,7 +211,8 @@ async def update_compliance_artifact(
 
     update_data = body.model_dump(exclude_unset=True)
     for field, value in update_data.items():
-        setattr(artifact, field, value)
+        # ORM attribute is metadata_ ("metadata" is reserved by Declarative)
+        setattr(artifact, "metadata_" if field == "metadata" else field, value)
     await db.commit()
     await db.refresh(artifact)
     return artifact
