@@ -10,6 +10,9 @@ export const daysAgo = (d: number, h = 9) => {
   const x = new Date(now);
   x.setDate(x.getDate() - d);
   x.setHours(h, (d * 17) % 60, 0, 0);
+  // "Today" events must never sit in the future: if the fixed hour has not
+  // happened yet, place the event in the last few hours, keeping order by hour.
+  if (x > now) x.setTime(now.getTime() - (24 - h) * 6 * 60_000);
   return x.toISOString();
 };
 export const daysAhead = (d: number) => daysAgo(-d);

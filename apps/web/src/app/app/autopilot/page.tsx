@@ -119,6 +119,7 @@ export default function AutopilotPage() {
   const summary = autopilotSummary();
   const hours30 = summary.saved_minutes_30d / 60;
   const dollars = Math.round(hours30 * OFFICE_RATE);
+  const needsOpen = autopilotEvents.filter((e) => e.outcome === 'needs_you' && !resolvedEvents.includes(e.id)).length;
 
   const perDay = useMemo(
     () =>
@@ -296,7 +297,7 @@ export default function AutopilotPage() {
                 </div>
                 <div>
                   <dt className="font-mono text-[10.5px] uppercase tracking-[0.12em] text-ink-3">Waiting on you</dt>
-                  <dd className="mt-1 font-semibold tabular text-warn">{summary.needs_you}</dd>
+                  <dd className={cn('mt-1 font-semibold tabular', needsOpen ? 'text-warn' : 'text-good')}>{needsOpen}</dd>
                 </div>
               </dl>
               <p className="mt-3 text-[11.5px] leading-snug text-ink-4">Each receipt carries an estimate of the office time it replaced. The 30-day figure projects this week forward.</p>
